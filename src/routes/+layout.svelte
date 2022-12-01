@@ -1,36 +1,58 @@
 <script>
-	import Header from './Header.svelte';
+    import Sidebar from './Sidebar.svelte';
 	import './styles.css';
+    import Topbar from './Topbar.svelte';
 </script>
 
+<svelte:head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</svelte:head>
+
 <div class="app">
-	<Header />
+	<Sidebar />
 
 	<main>
+		<Topbar />
 		<slot />
 	</main>
 
-	<footer>
+	<!-- <footer>
 		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer>
+	</footer> -->
 </div>
 
 <style>
 	.app {
-		display: flex;
+		/* display: flex;
 		flex-direction: column;
-		min-height: 100vh;
+		min-height: 100vh; */
+
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		height: 100%;
+		min-height: 100%;
+		overflow: hidden;
+		-webkit-box-align: stretch;
+		align-items: stretch;
 	}
 
 	main {
-		flex: 1;
+		/* flex: 1;
 		display: flex;
 		flex-direction: column;
 		padding: 1rem;
 		width: 100%;
 		max-width: 64rem;
 		margin: 0 auto;
-		box-sizing: border-box;
+		box-sizing: border-box; */
+
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100vh;
 	}
 
 	footer {
