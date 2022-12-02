@@ -246,5 +246,6 @@
         transition: 0.3s ease-in-out;
         opacity: 0;
         z-index: 50;
+		cursor: pointer;
     }
 </style>

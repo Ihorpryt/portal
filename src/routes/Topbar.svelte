@@ -3,14 +3,17 @@
 </script>
 
 <div class="top-bar">
-    <DarkModeSwitch />
-    <div class="user-selector">
-        <div class="avatar">
-            <p>JB</p>
-        </div>
-        <div class="user-selector-text">
-            <p class="user-title">N849WC</p>
-            <p class="description">Agusta Helicopter</p>
+    <p class="page-title">Good morning, James</p>
+    <div class="right-side">
+        <DarkModeSwitch />
+        <div class="user-selector">
+            <div class="avatar">
+                <p>JB</p>
+            </div>
+            <div class="user-selector-text">
+                <p class="user-title">N849WC</p>
+                <p class="description">Agusta Helicopter</p>
+            </div>
         </div>
     </div>
 </div>
@@ -19,13 +22,22 @@
     .top-bar {
         display: flex;
         align-items: center;
-        justify-content: flex-end;
-        gap: 25px;
+        justify-content: space-between;
         padding: 0 25px;
         width: 1fr;
         height: 57px;
         border-bottom: 1px solid rgb(241,245,249);
         transition: 0.3s;
+    }
+    .page-title {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .right-side {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 25px;
     }
     .user-selector {
         display: flex;
