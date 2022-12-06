@@ -1,8 +1,7 @@
 <script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
     import FlightStats from '../components/blocks/FlightStats.svelte';
+    import Expenses from '../components/blocks/Expenses.svelte';
+
 </script>
 
 <svelte:head>
@@ -12,6 +11,14 @@
 
 <section>
 	<FlightStats />
+	<div class="duo">
+		<Expenses 
+			title="Expenses"
+		/>
+		<Expenses 
+			title="Expenses by Category"
+		/>
+	</div>
 </section>
 
 <style>
@@ -21,7 +28,14 @@
 		justify-content: flex-start;
 		align-items: center;
 		flex: 0.6;
-		padding: 25px 50px;
+		padding: 25px 75px;
+		gap:25px;
+	}
+	.duo {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		gap:25px;
 	}
 
 </style>

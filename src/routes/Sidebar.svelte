@@ -43,46 +43,47 @@
 		<ul>
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
 				<a href="/">
-					<DashboardIcon color={$page.url.pathname === '/' ? '#4A5567' : "#97A3B6"} />
+					<DashboardIcon color={$page.url.pathname === '/' ? '#334155' : "#97A3B6"} />
 					<span class:visible={open}>Dashboard</span>
 				</a>
 			</li>
 			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
 				<a href="/about">
-					<CalendarIcon color={$page.url.pathname === '/about' ? '#4A5567' : "#97A3B6"} />
+					<CalendarIcon color={$page.url.pathname === '/about' ? '#334155' : "#97A3B6"} />
 					<span class:visible={open}>Calendar</span>
 				</a>
 			</li>
 			<li aria-current={$page.url.pathname === '/invoices' ? 'page' : undefined}>
 				<a href="/invoices">
-					<InvoicesIcon color={$page.url.pathname === '/invoices' ? '#4A5567' : "#97A3B6"} />
+					<InvoicesIcon color={$page.url.pathname === '/invoices' ? '#334155' : "#97A3B6"} />
 					<span class:visible={open}>Invoices</span>
 				</a>
 			</li>
 			<li aria-current={$page.url.pathname === '/metricandstats' ? 'page' : undefined}>
 				<a href="/metricandstats">
-					<MetricsIcon color={$page.url.pathname === '/metricandstats' ? '#4A5567' : "#97A3B6"} />
+					<MetricsIcon color={$page.url.pathname === '/metricandstats' ? '#334155' : "#97A3B6"} />
 					<span class:visible={open}>Metrics & Stats</span>
 				</a>
 			</li>
 			<li aria-current={$page.url.pathname === '/crew' ? 'page' : undefined}>
 				<a href="/crew">
-					<CrewIcon color={$page.url.pathname === '/crew' ? '#4A5567' : "#97A3B6"} />
+					<CrewIcon color={$page.url.pathname === '/crew' ? '#334155' : "#97A3B6"} />
 					<span class:visible={open}>Crew</span>
 				</a>
 			</li>
 			<li aria-current={$page.url.pathname === '/reports' ? 'page' : undefined}>
 				<a href="/reports">
-					<ReportsIcon color={$page.url.pathname === '/reports' ? '#4A5567' : "#97A3B6"} />
+					<ReportsIcon color={$page.url.pathname === '/reports' ? '#334155' : "#97A3B6"} />
 					<span class:visible={open}>Reports</span>
 				</a>
 			</li>
 			<li aria-current={$page.url.pathname === '/transactions' ? 'page' : undefined}>
 				<a href="/transactions">
-					<TransactionsIcon color={$page.url.pathname === '/transactions' ? '#4A5567' : "#97A3B6"} />
+					<TransactionsIcon color={$page.url.pathname === '/transactions' ? '#334155' : "#97A3B6"} />
 					<span class:visible={open}>Transactions</span>
 				</a>
 			</li>
+			<!-- #97A3B6 -->
 			<!-- <li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
 				<a href="/sverdle">Invoices</a>
 			</li> -->
@@ -112,11 +113,10 @@
 		height: 1fr;
 		min-width: 45px;
 		width:45px;
-		padding: 0px 10px;
+		padding: 0px 5px;
 
 		background-color: rgb(248, 250, 252);
 		border-right: 1px solid #e5e7eb;
-		
 	}
 
 	.corner {
@@ -179,9 +179,17 @@
 		border-radius: 10px;
 		padding: 0 10px;
 	}
+	li:hover {
+		background-color: rgba(27, 27, 40, 0.03);
+	}
+
 
 	li[aria-current='page'] {
-		background-color: #EBF3FA;
+		background-color: rgba(27, 27, 40, 0.05);
+	}
+
+	li[aria-current='page'] span {
+		color: #334155;
 	}
 
 	/* li[aria-current='page']::before {
@@ -204,20 +212,21 @@
 		height: 45px;
 		align-items: center;
 		color: var(--color-text);
-		font-weight: 500;
-		font-size: 15px;
+		font-weight: 600;
+		font-size: 13px;
 		text-decoration: none;
 		transition: color 0.2s linear;
 		font-family: 'Manrope', sans-serif;
 	}
 	nav a span {
 		visibility: hidden;
+		color: #788395;
 		opacity: 0;
 		transition: 0.3s;
 	}
 
 	a:hover {
-		color: var(--color-theme-1);
+		/* color: var(--color-theme-1); */
 	}
 
 	/* Controllers */
