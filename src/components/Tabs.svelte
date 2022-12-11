@@ -20,7 +20,9 @@
 
 <style>
     .tabs {
-        margin-bottom: 20px;
+        width: 100%;
+        display: flex;
+        /* margin-bottom: 20px; */
     }
     ul {
         display: flex;
@@ -31,10 +33,16 @@
     li {
         margin: 0 15px;
         cursor: pointer;
+        color: #788395;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    li:first-child {
+        margin-left: 0;
     }
     .active {
-        color: red;
-        border-bottom: 2px solid red;
+        color: rgba(0,153,255,1);
+        border-bottom: 2px solid rgba(0,153,255,1);
         padding-bottom: 8px;
     }
 </style>

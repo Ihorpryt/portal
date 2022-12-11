@@ -3,7 +3,8 @@
 </script>
 
 <div class="top-bar">
-    <p class="page-title">Good morning, James</p>
+    <div class="page-title">WOw</div>
+    
     <div class="right-side">
         <DarkModeSwitch />
         <div class="user-selector">

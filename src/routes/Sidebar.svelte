@@ -1,6 +1,7 @@
 <script>
 	import { page } from '$app/stores';
 	import logo from '$lib/images/svelte-logo.svg';
+	import logo2 from '$lib/images/portside-logo.svg';
 	import DashboardIcon from '$lib/images/icons/dashboard.svelte';
 	import CalendarIcon from '$lib/images/icons/calendar.svelte';
 	import InvoicesIcon from '$lib/images/icons/invoices.svelte';
@@ -35,7 +36,7 @@
 
 	<div class="corner">
 		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
+			<img src={logo2} alt="SvelteKit" />
 		</a>
 	</div>
 
@@ -113,10 +114,10 @@
 		height: 1fr;
 		min-width: 45px;
 		width:45px;
-		padding: 0px 5px;
+		padding: 0px 15px;
 
-		background-color: rgb(248, 250, 252);
-		border-right: 1px solid #e5e7eb;
+		/* background-color: rgb(248, 250, 252);
+		border-right: 1px solid #e5e7eb; */
 	}
 
 	.corner {
@@ -140,19 +141,19 @@
 		display: flex;
 		align-items: center;
 		justify-content: left;
-		padding-left: 7px;
+		padding-left: 5px;
 		width: 100%;
 		height: 100%;
 	}
 
 	.corner img {
-		width: 2em;
-		height: 2em;
+		width: 2.3em;
+		height: 2.3em;
 		object-fit: contain;
 	}
 
 	nav {
-		margin-top: 10px;
+		/* margin-top: 10px; */
 		display: flex;
 		justify-content: left;
 		align-items: flex-start;
@@ -164,6 +165,7 @@
 		position: relative;
 		padding: 0;
 		margin: 0;
+		margin-top:25px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

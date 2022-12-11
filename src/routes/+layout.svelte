@@ -11,7 +11,9 @@
 </svelte:head>
 
 <div class="app">
+
 	<Sidebar />
+	
 
 	<main>
 		<Topbar />
@@ -52,7 +54,8 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		height: 100vh;
+		/* height: 100vh; */
+		/* margin: 0 auto; */
 	}
 
 	footer {

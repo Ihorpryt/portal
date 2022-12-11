@@ -1,4 +1,5 @@
 <script>
+    import Button from "../Button.svelte";
     import Chart1 from "../Chart1.svelte";
     import Tabs from "../Tabs.svelte";
 
@@ -11,15 +12,18 @@
 </script>
 
 <div class="flight-stats">
-    <h2>Flights Overview</h2>
-    <p><span>All</span>  - Scheduled -  Completed</p>
+	<div class="top-title">
+		<h2>Flights Overview</h2>
+		<Button title="Filter"/>
+	</div>	
 	<Tabs {items} {activeItem} on:tabChange={tabChange} />
+
     <div class="block">
         <div class="left-cell-group">
             <div class="cell-row">
                 <div class="cell left">
                     <p>Flights</p>
-                    <p>12</p>
+                    <p>24</p>
 
 					<!-- Chart -->
 					<Chart1 />
@@ -44,14 +48,23 @@
                 </div>
             </div>
         </div>
-        <div class="right-map"></div>
+        <div class="right-map">
+		</div>
     </div>
 </div>
 
 <style>
 
 	.flight-stats {
+		display: flex;
+		flex-direction: column;
 		width: 100%;
+	}
+	.top-title {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
 	}
 	.block {
 		display: flex;
@@ -97,7 +110,8 @@
 		/* margin-bottom: 15px; */
 	}
 	.right-map {
-		background-color: lightblue;
+		background-image: url("../../lib/images/map.jpg");
+		background-size: cover;
         border-radius: 8px;
 		width: 100%;
 	}
@@ -106,13 +120,8 @@
 		font-size: 25px;
 		font-weight: 700;
 		width: 100%;
+		margin:0;
 	}
-
-	.flight-stats p span {
-		color: var(--color-theme-1);
-	}
-
-	/* Chart */
 
 
 
