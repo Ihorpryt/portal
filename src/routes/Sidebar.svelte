@@ -2,6 +2,7 @@
 	import { page } from '$app/stores';
 	import logo from '$lib/images/svelte-logo.svg';
 	import logo2 from '$lib/images/portside-logo.svg';
+	import logoFull from '$lib/images/portside-logo-full.svg';
 	import DashboardIcon from '$lib/images/icons/dashboard.svelte';
 	import CalendarIcon from '$lib/images/icons/calendar.svelte';
 	import InvoicesIcon from '$lib/images/icons/invoices.svelte';
@@ -36,7 +37,11 @@
 
 	<div class="corner">
 		<a href="https://kit.svelte.dev">
-			<img src={logo2} alt="SvelteKit" />
+			{#if open === false}
+			<img class="small-logo" src={logo2} alt="SvelteKit" />
+			{:else}
+			<img class="big-logo"src={logoFull} alt="SvelteKit" />
+			{/if}
 		</a>
 	</div>
 
@@ -125,7 +130,7 @@
 		min-height: 57px;
 		height: 57px;
 
-		/* border-bottom: 1px solid #e5e7eb; */
+		border-bottom: 1px solid rgb(241,245,249);
 	}
 
 	.footer {
@@ -146,7 +151,7 @@
 		height: 100%;
 	}
 
-	.corner img {
+	.corner .small-logo {
 		width: 2.3em;
 		height: 2.3em;
 		object-fit: contain;
