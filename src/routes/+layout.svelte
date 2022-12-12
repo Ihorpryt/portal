@@ -2,6 +2,16 @@
     import Sidebar from './Sidebar.svelte';
 	import './styles.css';
     import Topbar from './Topbar.svelte';
+	import SvelteTooltip from '../components/SvelteTooltip.svelte';
+
+	let open = false;
+    $: console.log(open)
+
+    function onKeydown(e) {
+        if (e.keyCode === 219) {
+            open = !open
+        }
+    }
 </script>
 
 <svelte:head>
@@ -12,10 +22,16 @@
 
 <div class="app">
 
-	<Sidebar />
-	
+	<div class="collapse-btn-wrapper" class:margin-toggle={open} >
+        <SvelteTooltip tip={open ? "Collapse" : "Expand"} right color="black">
+            <button class="collapse-btn" on:click={() => open = !open}></button>
+        </SvelteTooltip>
+    </div>
 
-	<main>
+	<Sidebar open={open} />
+
+
+	<main class:margin={open}>
 		<Topbar />
 		<slot />
 	</main>
@@ -25,54 +41,49 @@
 	</footer> -->
 </div>
 
+<svelte:window on:keydown={onKeydown} />
+
 <style>
 	.app {
-		/* display: flex;
-		flex-direction: column;
-		min-height: 100vh; */
-
 		display: flex;
 		flex-direction: row;
-		width: 100%;
-		height: 100%;
-		min-height: 100%;
-		overflow: hidden;
-		-webkit-box-align: stretch;
-		align-items: stretch;
 	}
 
 	main {
-		/* flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box; */
-
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		/* height: 100vh; */
-		/* margin: 0 auto; */
+		margin-left: 64px;
+		transition: 0.3s ease-in-out;
 	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
+	.margin {
+		margin-left: calc(20px + 200px);
 	}
-
-	footer a {
-		font-weight: bold;
+	.margin-toggle {
+		margin-left: 156px;
 	}
+    .collapse-btn-wrapper {
+        top: 45px;
+        left: 52px;
+        position: fixed;
+		z-index: 80;
+		transition: 0.3s ease-in-out;
+    }
+    .collapse-btn {
+        width: 25px;
+        height: 25px;
+        border-radius: 50px;
+		border: 1px solid #e5e7eb;
+        background-color: white;
+        transition: 0.3s ease-in-out;
+        opacity: 1;
+        z-index: 88;
+		cursor: pointer;
+    }
 
 	@media (min-width: 480px) {
-		footer {
+		/* footer {
 			padding: 12px 0;
-		}
+		} */
 	}
 </style>

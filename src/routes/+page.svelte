@@ -23,14 +23,12 @@
 
 <style>
 	section {
-		margin-left: 65px;
+		margin-top: 56px;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: center;
-		flex: 0.6;
-		margin-top: 50px;
-		padding: 50px 50px;
+		padding: 48px;
 		gap:25px;
 	}
 	.duo {

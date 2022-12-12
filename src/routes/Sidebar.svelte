@@ -13,32 +13,15 @@
 	import SvelteTooltip from '../components/SvelteTooltip.svelte';
 	import Hotkey from '../components/Hotkey.svelte';
 	import github from '$lib/images/github.svg';
+	
+	export let open;
+    // $: console.log(open)
 
-	let open = false;
-    $: console.log(open)
 
-    function onKeydown(e) {
-        if (e.keyCode === 219) {
-            open = !open
-        }
-    }
-
-	let w;
 	
 </script>
 
-<!-- <header class:open={open}   on:keydown={onKeydown} > -->
-<header class:open={open}  on:keydown={onKeydown} bind:clientWidth={w}>
-
-	{w}
-
-	<!-- Collapse button -->
-    <div class="collapse-btn-wrapper" >
-        <SvelteTooltip tip={open ? "Collapse" : "Expand"} right color="black">
-            <button class="collapse-btn" on:click={() => open = !open}></button>
-        </SvelteTooltip>
-    </div>
-    <!-- Collapse button -->
+<header class:open={open} >
 
 	<div class="corner">
 		<a href="https://kit.svelte.dev">
@@ -94,37 +77,29 @@
 					<span class:visible={open}>Transactions</span>
 				</a>
 			</li>
-			<!-- #97A3B6 -->
-			<!-- <li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-				<a href="/sverdle">Invoices</a>
-			</li> -->
 		</ul>
 
 	</nav>
 
 	<div class="footer" class:visible={open}>
 		<p>© 2017-2022 Portside, Inc.</p>
-		<!-- <a href="https://github.com/sveltejs/kit">
-			<img src={github} alt="GitHub" />
-		</a> -->
 	</div>
 </header>
 
-
-<svelte:window on:keydown={onKeydown} />
 
 <style>
 
 	header {
 		position: fixed;
+
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		transition: 0.3s ease-in-out;
 		height: 100%;
 		z-index: 1;
-		min-width: 45px;
-		width:45px;
+		min-width: 44px;
+		width:44px;
 		padding: 0px 10px;
 
 		background-color: rgb(248, 250, 252);
@@ -226,7 +201,7 @@
 		align-items: center;
 		color: var(--color-text);
 		font-weight: 600;
-		font-size: 13px;
+		font-size: 14px;
 		text-decoration: none;
 		transition: color 0.2s linear;
 		font-family: 'Manrope', sans-serif;
@@ -238,9 +213,9 @@
 		transition: 0.3s;
 	}
 
-	a:hover {
-		/* color: var(--color-theme-1); */
-	}
+	/* a:hover {
+		color: var(--color-theme-1);
+	} */
 
 	/* Controllers */
 	.open {
@@ -251,23 +226,4 @@
 		visibility: visible;	
 	}
 
-	header:hover .collapse-btn {
-        opacity: 1;
-    }
-    .collapse-btn-wrapper {
-        top: 45px;
-        right: -13px;
-        position: absolute;
-    }
-    .collapse-btn {
-        width: 25px;
-        height: 25px;
-        border-radius: 50px;
-		border: 1px solid #e5e7eb;
-        background-color: white;
-        transition: 0.3s ease-in-out;
-        opacity: 0;
-        z-index: 50;
-		cursor: pointer;
-    }
 </style>

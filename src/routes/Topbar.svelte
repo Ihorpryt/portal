@@ -4,7 +4,6 @@
 
 <div class="top-bar">
     <div class="page-title">WOw</div>
-    
     <div class="right-side">
         <DarkModeSwitch />
         <div class="user-selector">
@@ -22,11 +21,13 @@
 <style>
     .top-bar {
         position: fixed;
+
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        height: 57px;
+        right: 0;
+        height: 56px;
         border-bottom: 1px solid rgb(241,245,249);
         transition: 0.3s;
         background-color: rgba(255,255,255, 0.8);
