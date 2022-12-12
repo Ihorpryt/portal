@@ -22,10 +22,15 @@
             open = !open
         }
     }
+
+	let w;
+	
 </script>
 
 <!-- <header class:open={open}   on:keydown={onKeydown} > -->
-<header class:open={open}  on:keydown={onKeydown} >
+<header class:open={open}  on:keydown={onKeydown} bind:clientWidth={w}>
+
+	{w}
 
 	<!-- Collapse button -->
     <div class="collapse-btn-wrapper" >
@@ -111,18 +116,19 @@
 <style>
 
 	header {
-		position: relative;
+		position: fixed;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		transition: 0.3s ease-in-out;
-		height: 1fr;
+		height: 100%;
+		z-index: 1;
 		min-width: 45px;
 		width:45px;
-		padding: 0px 15px;
+		padding: 0px 10px;
 
-		/* background-color: rgb(248, 250, 252);
-		border-right: 1px solid #e5e7eb; */
+		background-color: rgb(248, 250, 252);
+		border-right: 1px solid #e5e7eb;
 	}
 
 	.corner {

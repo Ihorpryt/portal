@@ -21,14 +21,17 @@
 
 <style>
     .top-bar {
+        position: fixed;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 25px;
-        width: 1fr;
+        width: 100%;
         height: 57px;
         border-bottom: 1px solid rgb(241,245,249);
         transition: 0.3s;
+        background-color: rgba(255,255,255, 0.8);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
     }
     .page-title {
         font-size: 16px;
@@ -41,6 +44,7 @@
         align-items: center;
         justify-content: flex-end;
         gap: 25px;
+        margin-right: 50px;
     }
     .user-selector {
         display: flex;
