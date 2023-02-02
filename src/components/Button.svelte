@@ -1,17 +1,33 @@
 <script>
+    import Filter from "../lib/images/icons/filter.svelte";
+
     export let title;
 </script>
 
-<button name="button">{title}</button>
+<button name="button"><Filter/> {title}</button>
 
 <style>
     button {
-        height: 44px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        height: 48px;
         border: 1px solid #ccc;
-        padding: 0 15px;
-        border-radius: 10px;
+        border: none;
+        padding: 0 18px;
+        border-radius: 40px;
         background-color: white;
-        font-size: 15px;
+        font-size: 14px;
+        font-weight: 600;
         cursor: pointer;
+
+        transition: 0.3s;
+    }
+    button:hover {
+        background-color: #F6F6F8;
+    }
+    :global(body.dark-mode) button {
+        background: none;
     }
 </style>

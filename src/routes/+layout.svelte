@@ -3,6 +3,8 @@
 	import './styles.css';
     import Topbar from './Topbar.svelte';
 	import SvelteTooltip from '../components/SvelteTooltip.svelte';
+    import ChevronRight from '../lib/images/icons/chevron-right.svelte';
+    import Menu from '../lib/images/icons/menu.svelte';
 
 	let open = false;
     $: console.log(open)
@@ -24,12 +26,14 @@
 
 	<div class="collapse-btn-wrapper" class:margin-toggle={open} >
         <SvelteTooltip tip={open ? "Collapse" : "Expand"} right color="black">
-            <button class="collapse-btn" on:click={() => open = !open}></button>
+            <button class="collapse-btn" on:click={() => open = !open} class:rotate={open}>
+				<Menu/>
+			</button>
         </SvelteTooltip>
     </div>
 
 	<Sidebar open={open} />
-
+	
 
 	<main class:margin={open}>
 		<Topbar />
@@ -53,37 +57,51 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		margin-left: 64px;
+		margin-left: 76px;
 		transition: 0.3s ease-in-out;
 	}
 	.margin {
 		margin-left: calc(20px + 200px);
 	}
-	.margin-toggle {
+	/* .margin-toggle {
 		margin-left: 156px;
-	}
+	} */
     .collapse-btn-wrapper {
-        top: 45px;
-        left: 52px;
+        top: 7px;
+        left: 28px;
         position: fixed;
 		z-index: 80;
 		transition: 0.3s ease-in-out;
     }
     .collapse-btn {
-        width: 25px;
-        height: 25px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
         border-radius: 50px;
-		border: 1px solid #e5e7eb;
-        background-color: white;
+		/* background-color: #ECEEF1; */
+		border: none;
+		/* border: none; */
+        background: none;
         transition: 0.3s ease-in-out;
         opacity: 1;
         z-index: 88;
 		cursor: pointer;
+		padding: 0;
     }
+	.collapse-btn:hover {
+		background-color: #E9E9E9;
+	}
+	/* .rotate {
+		transform: rotate(180deg);
+	} */
 
 	@media (min-width: 480px) {
 		/* footer {
 			padding: 12px 0;
 		} */
+	}
+
+	:global(body.dark-mode) .app {
+		background-color: #1E1E1E;
 	}
 </style>

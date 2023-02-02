@@ -19,11 +19,17 @@
         border-radius: 10px;
 
     }
-    .menu:hover {
+    /* .menu:hover {
         background-color: rgba(27, 27, 40, 0.03);
-    }
+    } */
     .icon {
         width: 24px !important;
         height: 24px;
+    }
+    :global(body.dark-mode) .icon svg {
+        stroke: #99A3B4;
+    }
+    :global(body.dark-mode) .icon svg:hover {
+        stroke: #121929;
     }
 </style>

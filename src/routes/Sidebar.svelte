@@ -23,7 +23,7 @@
 
 <header class:open={open} >
 
-	<div class="corner">
+	<!-- <div class="corner">
 		<a href="https://kit.svelte.dev">
 			{#if open === false}
 			<img class="small-logo" src={logo2} alt="SvelteKit" />
@@ -31,49 +31,50 @@
 			<img class="big-logo"src={logoFull} alt="SvelteKit" />
 			{/if}
 		</a>
-	</div>
+	</div> -->
+
 
 	<nav>
 		<ul>
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
 				<a href="/">
-					<DashboardIcon color={$page.url.pathname === '/' ? '#334155' : "#97A3B6"} />
-					<span class:visible={open}>Dashboard</span>
+					<DashboardIcon color={$page.url.pathname === '/' ? '#121929' : "#97A3B6"} />
+					<span class:visible={open} >Dashboard</span>
 				</a>
 			</li>
 			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
 				<a href="/about">
-					<CalendarIcon color={$page.url.pathname === '/about' ? '#334155' : "#97A3B6"} />
+					<CalendarIcon color={$page.url.pathname === '/about' ? '#121929' : "#97A3B6"} />
 					<span class:visible={open}>Calendar</span>
 				</a>
 			</li>
 			<li aria-current={$page.url.pathname === '/invoices' ? 'page' : undefined}>
 				<a href="/invoices">
-					<InvoicesIcon color={$page.url.pathname === '/invoices' ? '#334155' : "#97A3B6"} />
+					<InvoicesIcon color={$page.url.pathname === '/invoices' ? '#121929' : "#97A3B6"} />
 					<span class:visible={open}>Invoices</span>
 				</a>
 			</li>
 			<li aria-current={$page.url.pathname === '/metricandstats' ? 'page' : undefined}>
 				<a href="/metricandstats">
-					<MetricsIcon color={$page.url.pathname === '/metricandstats' ? '#334155' : "#97A3B6"} />
+					<MetricsIcon color={$page.url.pathname === '/metricandstats' ? '#121929' : "#97A3B6"} />
 					<span class:visible={open}>Metrics & Stats</span>
 				</a>
 			</li>
 			<li aria-current={$page.url.pathname === '/crew' ? 'page' : undefined}>
 				<a href="/crew">
-					<CrewIcon color={$page.url.pathname === '/crew' ? '#334155' : "#97A3B6"} />
+					<CrewIcon color={$page.url.pathname === '/crew' ? '#121929' : "#97A3B6"} />
 					<span class:visible={open}>Crew</span>
 				</a>
 			</li>
 			<li aria-current={$page.url.pathname === '/reports' ? 'page' : undefined}>
 				<a href="/reports">
-					<ReportsIcon color={$page.url.pathname === '/reports' ? '#334155' : "#97A3B6"} />
+					<ReportsIcon color={$page.url.pathname === '/reports' ? '#121929' : "#97A3B6"} />
 					<span class:visible={open}>Reports</span>
 				</a>
 			</li>
 			<li aria-current={$page.url.pathname === '/transactions' ? 'page' : undefined}>
 				<a href="/transactions">
-					<TransactionsIcon color={$page.url.pathname === '/transactions' ? '#334155' : "#97A3B6"} />
+					<TransactionsIcon color={$page.url.pathname === '/transactions' ? '#121929' : "#97A3B6"} />
 					<span class:visible={open}>Transactions</span>
 				</a>
 			</li>
@@ -96,22 +97,28 @@
 		flex-direction: column;
 		justify-content: center;
 		transition: 0.3s ease-in-out;
-		height: 100%;
+		height: 98%;
 		z-index: 1;
 		min-width: 44px;
 		width:44px;
-		padding: 0px 10px;
+		padding: 0px 20px;
+		margin-top: 2px;
+		margin-left: 8px;
+		margin-bottom: 8px;
 
-		background-color: rgb(248, 250, 252);
-		border-right: 1px solid #e5e7eb;
+		/* background: #111727; */
+		/* border-radius: 20px; */
+		/* background-color: rgb(248, 250, 252); */
+		/* border-right: 1px solid #e5e7eb; */
 	}
 
 	.corner {
 		width: 100%;
 		min-height: 57px;
 		height: 57px;
+		z-index: 60;
 
-		border-bottom: 1px solid rgb(241,245,249);
+		/* border-bottom: 1px solid #2A2F3C; */
 	}
 
 	.footer {
@@ -127,15 +134,21 @@
 		display: flex;
 		align-items: center;
 		justify-content: left;
-		padding-left: 5px;
-		width: 100%;
+		padding-left: 75px;
+		width: 150px;
 		height: 100%;
+		z-index: 60;
 	}
 
 	.corner .small-logo {
 		width: 2.3em;
 		height: 2.3em;
 		object-fit: contain;
+	}
+
+	.corner .big-logo {
+		width: 150px;
+
 	}
 
 	nav {
@@ -145,6 +158,7 @@
 		align-items: flex-start;
 		--background: rgba(255, 255, 255, 0.7);
 		height: 100%;
+		margin-top: 65px;
 	}
 
 	ul {
@@ -173,11 +187,11 @@
 
 
 	li[aria-current='page'] {
-		background-color: rgba(27, 27, 40, 0.05);
+		background-color: #E9E9E9;
 	}
 
 	li[aria-current='page'] span {
-		color: #334155;
+		color: #121929;
 	}
 
 	/* li[aria-current='page']::before {
@@ -197,10 +211,10 @@
 		white-space: nowrap;
 		display: flex;
 		gap:12px;
-		height: 45px;
+		height: 44px;
 		align-items: center;
 		color: var(--color-text);
-		font-weight: 600;
+		font-weight: 500;
 		font-size: 14px;
 		text-decoration: none;
 		transition: color 0.2s linear;
@@ -219,7 +233,7 @@
 
 	/* Controllers */
 	.open {
-        width: 200px;
+        width: 180px;
     }
 	.visible {
 		opacity: 1;

@@ -23,11 +23,13 @@
         width: 100%;
         display: flex;
         /* margin-bottom: 20px; */
+        margin-left: 34px;
     }
     ul {
         display: flex;
         justify-content: center;
         padding: 0;
+        margin: 0;
         list-style-type: none;
     }
     li {
@@ -41,8 +43,8 @@
         margin-left: 0;
     }
     .active {
-        color: rgba(0,153,255,1);
-        border-bottom: 2px solid rgba(0,153,255,1);
+        color: #121929;
+        border-bottom: 2px solid #121929;
         padding-bottom: 8px;
     }
 </style>

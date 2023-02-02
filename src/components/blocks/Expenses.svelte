@@ -15,8 +15,8 @@
     }
     .block {
         height: 300px;
-        border-top: 1px solid black;
-        border-bottom: 1px solid black;
+        border-top: 1px solid #ebeef1;
+        border-bottom: 1px solid #ebeef1;
     }
     h2 {
 		font-size: 25px;

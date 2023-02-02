@@ -67,6 +67,7 @@
       right: 0;
       transform: translateX(100%);
       margin-right: -8px;
+      margin-top: 11px;
     }
   
     .tooltip.active {
