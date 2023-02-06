@@ -102,6 +102,6 @@
 	}
 
 	:global(body.dark-mode) .app {
-		background-color: #1E1E1E;
+		background-color: #18191A;
 	}
 </style>

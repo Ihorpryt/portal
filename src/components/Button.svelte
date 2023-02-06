@@ -29,5 +29,6 @@
     }
     :global(body.dark-mode) button {
         background: none;
+        color: white;
     }
 </style>

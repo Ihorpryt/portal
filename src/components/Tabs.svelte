@@ -47,4 +47,8 @@
         border-bottom: 2px solid #121929;
         padding-bottom: 8px;
     }
+    :global(body.dark-mode) .active {
+        border-bottom: 2px solid #fff;
+        color: #fff;
+    }
 </style>

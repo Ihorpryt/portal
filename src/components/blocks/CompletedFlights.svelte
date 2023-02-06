@@ -131,4 +131,18 @@
 		line-height: 25px;
 		margin: 0;
 	}
+	:global(body.dark-mode) .left-cell-group {
+		background: #242526;
+		border: 0.5px solid rgba(255,255,255,0.1);
+	}
+	:global(body.dark-mode) h3 {
+		color: white;
+	}
+	:global(body.dark-mode) .block {
+		background: #2E2F30;
+		border: none;
+	}
+	:global(body.dark-mode) .months p {
+		color: #fff;
+	}
 </style>

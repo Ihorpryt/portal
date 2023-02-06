@@ -214,14 +214,14 @@
 	}
 
 	:global(body.dark-mode) .left-cell-group {
-		border: 1px solid #000;
-		background: #17181C;
+		border: 0.5px solid rgba(255,255,255,0.1);
+		background: #242526;
 	}
 	:global(body.dark-mode) .metrics {
-		background: #1E1E1E;
+		background: #2E2F30;
 	}
 	:global(body.dark-mode) .cell {
-		background: #17181C;
+		background: #3A3B3C;
 	}
 	:global(body.dark-mode) .cell p:nth-child(2) {
 		color: white;
