@@ -25,7 +25,7 @@
 <div class="app">
 
 	<div class="collapse-btn-wrapper" class:margin-toggle={open} >
-        <SvelteTooltip tip={open ? "Collapse" : "Expand"} right color="black">
+        <SvelteTooltip tip={open ? "Collapse" : "Expand"} bottom color="black">
             <button class="collapse-btn" on:click={() => open = !open} class:rotate={open}>
 				<Menu/>
 			</button>

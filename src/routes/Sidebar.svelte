@@ -187,7 +187,7 @@
 
 
 	li[aria-current='page'] {
-		background-color: #E9E9E9;
+		outline: 1.5px solid #18191A;
 	}
 
 	li[aria-current='page'] span {
@@ -239,5 +239,8 @@
 		opacity: 1;
 		visibility: visible;	
 	}
-
+	:global(body.dark-mode) li[aria-current='page'] {
+		outline: 1.5px solid white;
+		background: rgba(255, 255, 255, 0.9);
+	}
 </style>
