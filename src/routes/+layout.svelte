@@ -3,7 +3,6 @@
 	import './styles.css';
     import Topbar from './Topbar.svelte';
 	import SvelteTooltip from '../components/SvelteTooltip.svelte';
-    import ChevronRight from '../lib/images/icons/chevron-right.svelte';
     import Menu from '../lib/images/icons/menu.svelte';
 
 	let open = false;

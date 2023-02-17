@@ -1,8 +1,5 @@
 <script>
 	import { page } from '$app/stores';
-	import logo from '$lib/images/svelte-logo.svg';
-	import logo2 from '$lib/images/portside-logo.svg';
-	import logoFull from '$lib/images/portside-logo-full.svg';
 	import DashboardIcon from '$lib/images/icons/dashboard.svelte';
 	import CalendarIcon from '$lib/images/icons/calendar.svelte';
 	import InvoicesIcon from '$lib/images/icons/invoices.svelte';
@@ -10,9 +7,6 @@
 	import CrewIcon from '$lib/images/icons/crew.svelte';
 	import ReportsIcon from '$lib/images/icons/reports.svelte';
 	import TransactionsIcon from '$lib/images/icons/transactions.svelte';
-	import SvelteTooltip from '../components/SvelteTooltip.svelte';
-	import Hotkey from '../components/Hotkey.svelte';
-	import github from '$lib/images/github.svg';
 	
 	export let open;
     // $: console.log(open)
@@ -112,14 +106,6 @@
 		/* border-right: 1px solid #e5e7eb; */
 	}
 
-	.corner {
-		width: 100%;
-		min-height: 57px;
-		height: 57px;
-		z-index: 60;
-
-		/* border-bottom: 1px solid #2A2F3C; */
-	}
 
 	.footer {
 		white-space: nowrap;
@@ -130,26 +116,7 @@
 		transition: 0.3s;
 	}
 
-	.corner a {
-		display: flex;
-		align-items: center;
-		justify-content: left;
-		padding-left: 75px;
-		width: 150px;
-		height: 100%;
-		z-index: 60;
-	}
 
-	.corner .small-logo {
-		width: 2.3em;
-		height: 2.3em;
-		object-fit: contain;
-	}
-
-	.corner .big-logo {
-		width: 150px;
-
-	}
 
 	nav {
 		/* margin-top: 10px; */
