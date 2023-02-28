@@ -6,11 +6,11 @@
 
 <div class="top-bar">
     
-    <div class="corner">
+    <!-- <div class="corner">
 		<a href="https://kit.svelte.dev">
 			<img class="big-logo"src={logoFull} alt="SvelteKit" />
 		</a>
-	</div>
+	</div> -->
 
     <div class="page-title">WOw</div>
     <div class="right-side">

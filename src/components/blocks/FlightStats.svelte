@@ -4,6 +4,8 @@
     import Tabs from "../Tabs.svelte";
     import CompletedFlights from "./CompletedFlights.svelte";
 	import Period from "../Period.svelte";
+    import ButtonPrimary from "../Button_Primary.svelte";
+    import Plus from "../../lib/images/icons/plus.svelte";
 
 	//Tabs
 	let items = ['All', 'Scheduled', 'Completed']
@@ -19,6 +21,7 @@
 		<div class="right-tools">
 			<Period />
 			<Button title="Filter"/>
+			<ButtonPrimary> <Plus/> Magic</ButtonPrimary>
 		</div>
 	</div>	
 	<!-- <Tabs {items} {activeItem} on:tabChange={tabChange} /> -->

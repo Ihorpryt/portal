@@ -8,6 +8,7 @@
 	import ReportsIcon from '$lib/images/icons/reports.svelte';
 	import TransactionsIcon from '$lib/images/icons/transactions.svelte';
 	
+	import logoFull from '$lib/images/portside-logo-full.svg';
 	export let open;
     // $: console.log(open)
 
@@ -17,58 +18,72 @@
 
 <header class:open={open} >
 
-	<!-- <div class="corner">
+	<div class="corner">
 		<a href="https://kit.svelte.dev">
 			{#if open === false}
-			<img class="small-logo" src={logo2} alt="SvelteKit" />
+			<div></div>
 			{:else}
 			<img class="big-logo"src={logoFull} alt="SvelteKit" />
 			{/if}
 		</a>
-	</div> -->
+	</div>
 
 
 	<nav>
 		<ul>
-			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
+			<li>
 				<a href="/">
-					<DashboardIcon color={$page.url.pathname === '/' ? '#121929' : "#97A3B6"} />
+					<div aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
+						<DashboardIcon color={$page.url.pathname === '/' ? '#121929' : "#97A3B6"} />
+					</div>
 					<span class:visible={open} >Dashboard</span>
 				</a>
 			</li>
-			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
+			<li>
 				<a href="/about">
-					<CalendarIcon color={$page.url.pathname === '/about' ? '#121929' : "#97A3B6"} />
+					<div aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
+						<CalendarIcon color={$page.url.pathname === '/about' ? '#121929' : "#97A3B6"} />
+					</div>
 					<span class:visible={open}>Calendar</span>
 				</a>
 			</li>
-			<li aria-current={$page.url.pathname === '/invoices' ? 'page' : undefined}>
+			<li>
 				<a href="/invoices">
-					<InvoicesIcon color={$page.url.pathname === '/invoices' ? '#121929' : "#97A3B6"} />
+					<div aria-current={$page.url.pathname === '/invoices' ? 'page' : undefined}>
+						<InvoicesIcon color={$page.url.pathname === '/invoices' ? '#121929' : "#97A3B6"} />
+					</div>
 					<span class:visible={open}>Invoices</span>
 				</a>
 			</li>
-			<li aria-current={$page.url.pathname === '/metricandstats' ? 'page' : undefined}>
+			<li>
 				<a href="/metricandstats">
-					<MetricsIcon color={$page.url.pathname === '/metricandstats' ? '#121929' : "#97A3B6"} />
+					<div aria-current={$page.url.pathname === '/metricandstats' ? 'page' : undefined}>
+						<MetricsIcon color={$page.url.pathname === '/metricandstats' ? '#121929' : "#97A3B6"} />
+					</div>
 					<span class:visible={open}>Metrics & Stats</span>
 				</a>
 			</li>
-			<li aria-current={$page.url.pathname === '/crew' ? 'page' : undefined}>
+			<li>
 				<a href="/crew">
-					<CrewIcon color={$page.url.pathname === '/crew' ? '#121929' : "#97A3B6"} />
+					<div aria-current={$page.url.pathname === '/crew' ? 'page' : undefined}>
+						<CrewIcon color={$page.url.pathname === '/crew' ? '#121929' : "#97A3B6"} />
+					</div>
 					<span class:visible={open}>Crew</span>
 				</a>
 			</li>
-			<li aria-current={$page.url.pathname === '/reports' ? 'page' : undefined}>
+			<li>
 				<a href="/reports">
-					<ReportsIcon color={$page.url.pathname === '/reports' ? '#121929' : "#97A3B6"} />
+					<div aria-current={$page.url.pathname === '/reports' ? 'page' : undefined}>
+						<ReportsIcon color={$page.url.pathname === '/reports' ? '#121929' : "#97A3B6"} />
+					</div>
 					<span class:visible={open}>Reports</span>
 				</a>
 			</li>
-			<li aria-current={$page.url.pathname === '/transactions' ? 'page' : undefined}>
+			<li>
 				<a href="/transactions">
-					<TransactionsIcon color={$page.url.pathname === '/transactions' ? '#121929' : "#97A3B6"} />
+					<div aria-current={$page.url.pathname === '/transactions' ? 'page' : undefined}>
+						<TransactionsIcon color={$page.url.pathname === '/transactions' ? '#121929' : "#97A3B6"} />
+					</div>
 					<span class:visible={open}>Transactions</span>
 				</a>
 			</li>
@@ -76,9 +91,13 @@
 
 	</nav>
 
-	<div class="footer" class:visible={open}>
-		<p>© 2017-2022 Portside, Inc.</p>
+	<div class="user-selection">
+		<div class="user-avatar">W</div>
 	</div>
+
+	<!-- <div class="footer" class:visible={open}>
+		<p>© 2017-2022 Portside, Inc.</p>
+	</div> -->
 </header>
 
 
@@ -106,6 +125,11 @@
 		/* border-right: 1px solid #e5e7eb; */
 	}
 
+	.corner {
+		position: absolute;
+        padding-left: 55px;
+        top: 35px;
+    }
 
 	.footer {
 		white-space: nowrap;
@@ -124,8 +148,9 @@
 		justify-content: left;
 		align-items: flex-start;
 		--background: rgba(255, 255, 255, 0.7);
-		height: 100%;
+		/* height: 100%; */
 		margin-top: 65px;
+		flex: 1;
 	}
 
 	ul {
@@ -145,16 +170,25 @@
 
 	li {
 		position: relative;
-		border-radius: 10px;
-		padding: 0 10px;
+		border-radius: 50px;
+		padding-left: 2px;
 	}
 	li:hover {
 		background-color: rgba(27, 27, 40, 0.03);
 	}
 
 
-	li[aria-current='page'] {
+	/* li[aria-current='page'] {
 		outline: 1.5px solid #18191A;
+	} */
+
+	[aria-current='page'] {
+		outline: 1.5px solid #121929;
+		padding: 8px;
+		border-radius: 100px;
+	}
+	li div {
+		padding: 8px;
 	}
 
 	li[aria-current='page'] span {
@@ -193,7 +227,19 @@
 		opacity: 0;
 		transition: 0.3s;
 	}
-
+	.user-selection {
+		margin-bottom: 16px;
+	}
+	.user-avatar {
+		width: 44px;
+		height: 44px;
+		background-color: #FAFE2F;
+		border-radius: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 20px;
+	}
 	/* a:hover {
 		color: var(--color-theme-1);
 	} */
@@ -206,7 +252,7 @@
 		opacity: 1;
 		visibility: visible;	
 	}
-	:global(body.dark-mode) li[aria-current='page'] {
+	:global(body.dark-mode) [aria-current='page'] {
 		outline: 1.5px solid white;
 		background: rgba(255, 255, 255, 0.9);
 	}

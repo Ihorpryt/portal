@@ -13,7 +13,7 @@
         align-items: center;
         gap: 12px;
         height: 48px;
-        border: 1px solid #ccc;
+        /* border: 1px solid #ccc; */
         border: none;
         padding: 0 18px;
         border-radius: 40px;

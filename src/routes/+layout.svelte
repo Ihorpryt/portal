@@ -35,7 +35,7 @@
 	
 
 	<main class:margin={open}>
-		<Topbar />
+		<!-- <Topbar /> -->
 		<slot />
 	</main>
 
@@ -66,7 +66,7 @@
 		margin-left: 156px;
 	} */
     .collapse-btn-wrapper {
-        top: 7px;
+        top: 25px;
         left: 28px;
         position: fixed;
 		z-index: 80;
