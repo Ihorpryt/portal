@@ -9,6 +9,7 @@
 	import TransactionsIcon from '$lib/images/icons/transactions.svelte';
 	
 	import logoFull from '$lib/images/portside-logo-full.svg';
+    import DarkModeSwitch from '../components/DarkModeSwitch.svelte';
 	export let open;
     // $: console.log(open)
 
@@ -91,8 +92,20 @@
 
 	</nav>
 
-	<div class="user-selection">
-		<div class="user-avatar">W</div>
+	<div class="bottom-part">
+		<div class="darkmode-selector">
+			<DarkModeSwitch /><p class:visible={open}>Dark Mode</p>
+		</div>
+
+		<div class="user-selection">
+			<div class="user-avatar">W</div>
+
+			<div class="user-selector-text" class:visible={open}>
+                <p class="user-title">Warren Buffett</p>
+                <p class="description">Gulfstream G700</p>
+            </div>
+
+		</div>
 	</div>
 
 	<!-- <div class="footer" class:visible={open}>
@@ -114,10 +127,8 @@
 		z-index: 1;
 		min-width: 44px;
 		width:44px;
-		padding: 0px 20px;
+		padding: 0px 16px;
 		margin-top: 2px;
-		margin-left: 8px;
-		margin-bottom: 8px;
 
 		/* background: #111727; */
 		/* border-radius: 20px; */
@@ -191,7 +202,7 @@
 		padding: 8px;
 	}
 
-	li[aria-current='page'] span {
+	[aria-current='page'] ~ span {
 		color: #121929;
 	}
 
@@ -227,8 +238,35 @@
 		opacity: 0;
 		transition: 0.3s;
 	}
+	.bottom-part {
+		display: flex;
+		flex-direction: column;
+		gap: 36px;
+	}
+	.darkmode-selector {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		gap: 12px;
+		width: 120px;
+	}
+	.darkmode-selector p {
+		visibility: hidden;
+		color: #99A3B4;
+		font-weight: 500;
+		font-size: 12px;
+		white-space: nowrap;
+		opacity: 0;
+		transition: 0.3s;
+		/* flex-shrink: 0; */
+	}
 	.user-selection {
+		display: flex;
+		gap: 10px;
+		align-items: center;
 		margin-bottom: 16px;
+		flex-wrap: nowrap;
+		width: 150px;
 	}
 	.user-avatar {
 		width: 44px;
@@ -240,6 +278,30 @@
 		justify-content: center;
 		font-size: 20px;
 	}
+	.user-selector-text {
+		opacity: 0;
+		visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+		transition: 0.3s;
+    }
+    .user-selector-text p {
+        margin: 0;
+    }
+    .user-title {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #121929;
+        transition: 0.3s;
+    }
+    .description {
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 400;
+        color: #677489;
+    }
 	/* a:hover {
 		color: var(--color-theme-1);
 	} */
@@ -249,8 +311,8 @@
         width: 180px;
     }
 	.visible {
-		opacity: 1;
-		visibility: visible;	
+		opacity: 1 !important;
+		visibility: visible !important;	
 	}
 	:global(body.dark-mode) [aria-current='page'] {
 		outline: 1.5px solid white;

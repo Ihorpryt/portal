@@ -37,8 +37,9 @@
         }
 
         .slider {
+        margin-left: 2px;
         position: absolute;
-        width: 100%;
+        width: 40px;
         height: 100%;
         border-radius: 50px;
         transition: 0.3s;

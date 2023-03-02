@@ -56,18 +56,18 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		margin-left: 76px;
+		margin-left: 52px;
 		transition: 0.3s ease-in-out;
 	}
 	.margin {
-		margin-left: calc(20px + 200px);
+		margin-left: calc(20px + 190px);
 	}
 	/* .margin-toggle {
 		margin-left: 156px;
 	} */
     .collapse-btn-wrapper {
         top: 25px;
-        left: 28px;
+        left: 16px;
         position: fixed;
 		z-index: 80;
 		transition: 0.3s ease-in-out;
