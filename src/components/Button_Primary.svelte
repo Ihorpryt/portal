@@ -20,5 +20,6 @@
       font-size: 14px;
       font-weight: 600;
       cursor: pointer;
+      white-space: nowrap;
     }
   </style>
