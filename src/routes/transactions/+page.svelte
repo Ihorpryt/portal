@@ -11,16 +11,17 @@
   	];
 
 	const numb = [
-	{number: 'dasdsad'},
-	{number: 'dasdsad'},
-	{number: 'dasdsad'},
-	{number: 'dasdsad'},
-	{number: 'dasdsad'},
-	{number: 'dasdsad'},
-	{number: 'dasdsad'},
-	{number: 'dasdsad'},
-	{number: 'dasdsad'},
+		{number: '-'},
+		{number: 'Review'},
+		{number: 'Date'},
+		{number: 'Period'},
+		{number: 'Category'},
+		{number: 'Subcategory'},
+		{number: 'Trip No.'},
+		{number: 'Publish'},
+		{number: 'Aircraft'},
 	];
+
 </script>
 
 <svelte:head>
@@ -48,9 +49,28 @@
 	<div class="table-controls"></div>
 
 	<div class="grid">
-		{#each numb as number}
-		  <div class="item">{number.number}</div>
+		<div class="row">
+			{#each numb as number}
+			<div class="item">{number.number}</div>
+			{/each}
+		</div>
+
+		{#each Array(20) as _, index}
+		<div class="row">
+			<div class="item-content">{index + 1}</div>
+			<div class="item-content"></div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+		</div>
 		{/each}
+
+		<div class="grid-info"></div>
+
 	</div>
 
 </div>	
@@ -125,16 +145,54 @@
 	}
 
 	.grid {
-		display: grid;
-		grid-template-columns: repeat(9, 1fr);
-		grid-template-rows: repeat(3, 1fr);
-		gap: 8px;
+		display: flex;
+		flex-direction: column;
+		
 	}
-
+	.row {
+		display: flex;
+		flex-direction: row;
+		border-bottom: 1px solid #E5E7EB;
+	}
 	.item {
-		background-color: #007bff;
-		color: #fff;
-		padding: 16px;
+		display: flex;
+		justify-content: flex-start;
+    	align-items: center;
+		padding: 0 8px;
+		background-color: #F0F1F2;
+		color: #121929;
 		text-align: center;
+		border-right: 1px solid #E5E7EB;
+		width: 100%;
+		height: 32px;
+
+		font-family: 'Manrope';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 13px;
+		line-height: 18px;
+	}
+	.item-content {
+		display: flex;
+		justify-content: flex-start;
+    	align-items: center;
+		padding: 0 8px;
+		width: 100%;
+		height: 32px;
+
+		font-family: 'Manrope';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 13px;
+		line-height: 18px;
+	}
+	.grid div:last-child {
+		border-right: 0;
+	}
+	.grid-info {
+		height: 24px;
+		background: #F0F1F2;
+		position: sticky;
+		bottom: 0;
 	}
 </style>
