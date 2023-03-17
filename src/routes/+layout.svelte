@@ -24,7 +24,7 @@
 <div class="app">
 
 	<div class="collapse-btn-wrapper" class:margin-toggle={open} >
-        <SvelteTooltip tip={open ? "Collapse" : "Expand"} bottom color="black">
+        <SvelteTooltip tip={open ? "Collapse" : "Expand"} right color="black">
             <button class="collapse-btn" on:click={() => open = !open} class:rotate={open}>
 				<Menu/>
 			</button>
@@ -56,22 +56,25 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		margin-left: 52px;
+		margin-left: 60px;
 		transition: 0.3s ease-in-out;
 	}
 	.margin {
-		margin-left: calc(20px + 190px);
+		margin-left: calc(20px + 180px);
 	}
 	/* .margin-toggle {
 		margin-left: 156px;
 	} */
     .collapse-btn-wrapper {
         top: 25px;
-        left: 16px;
+        left: 8px;
         position: fixed;
 		z-index: 80;
 		transition: 0.3s ease-in-out;
     }
+	.collapse-btn:focus-visible {
+		outline: none;
+	}
     .collapse-btn {
 		display: flex;
 		justify-content: center;
@@ -88,7 +91,7 @@
 		padding: 0;
     }
 	.collapse-btn:hover {
-		background-color: #E9E9E9;
+		background-color: #f3f5f9;
 	}
 	/* .rotate {
 		transform: rotate(180deg);

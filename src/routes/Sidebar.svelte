@@ -19,7 +19,7 @@
 
 <header class:open={open} >
 
-	<div class="corner">
+	<div class="logo">
 		<a href="https://kit.svelte.dev">
 			{#if open === false}
 			<div></div>
@@ -32,58 +32,58 @@
 
 	<nav>
 		<ul>
-			<li>
+			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
 				<a href="/">
-					<div aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-						<DashboardIcon color={$page.url.pathname === '/' ? '#121929' : "#97A3B6"} />
+					<div>
+						<DashboardIcon color={$page.url.pathname === '/' ? '#121929' : "#121929"} />
 					</div>
 					<span class:visible={open} >Dashboard</span>
 				</a>
 			</li>
-			<li>
+			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
 				<a href="/about">
-					<div aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-						<CalendarIcon color={$page.url.pathname === '/about' ? '#121929' : "#97A3B6"} />
+					<div >
+						<CalendarIcon color={$page.url.pathname === '/about' ? '#121929' : "#121929"} />
 					</div>
 					<span class:visible={open}>Calendar</span>
 				</a>
 			</li>
-			<li>
+			<li aria-current={$page.url.pathname === '/invoices' ? 'page' : undefined}>
 				<a href="/invoices">
-					<div aria-current={$page.url.pathname === '/invoices' ? 'page' : undefined}>
-						<InvoicesIcon color={$page.url.pathname === '/invoices' ? '#121929' : "#97A3B6"} />
+					<div>
+						<InvoicesIcon color={$page.url.pathname === '/invoices' ? '#121929' : "#121929"} />
 					</div>
 					<span class:visible={open}>Invoices</span>
 				</a>
 			</li>
-			<li>
+			<li aria-current={$page.url.pathname === '/metricandstats' ? 'page' : undefined}>
 				<a href="/metricandstats">
-					<div aria-current={$page.url.pathname === '/metricandstats' ? 'page' : undefined}>
-						<MetricsIcon color={$page.url.pathname === '/metricandstats' ? '#121929' : "#97A3B6"} />
+					<div>
+						<MetricsIcon color={$page.url.pathname === '/metricandstats' ? '#121929' : "#121929"} />
 					</div>
 					<span class:visible={open}>Metrics & Stats</span>
 				</a>
 			</li>
-			<li>
+			<li aria-current={$page.url.pathname === '/crew' ? 'page' : undefined}>
 				<a href="/crew">
-					<div aria-current={$page.url.pathname === '/crew' ? 'page' : undefined}>
-						<CrewIcon color={$page.url.pathname === '/crew' ? '#121929' : "#97A3B6"} />
+					<div>
+						<CrewIcon color={$page.url.pathname === '/crew' ? '#121929' : "#121929"} />
 					</div>
 					<span class:visible={open}>Crew</span>
 				</a>
 			</li>
-			<li>
+			<li aria-current={$page.url.pathname === '/reports' ? 'page' : undefined}>
 				<a href="/reports">
-					<div aria-current={$page.url.pathname === '/reports' ? 'page' : undefined}>
-						<ReportsIcon color={$page.url.pathname === '/reports' ? '#121929' : "#97A3B6"} />
+					<div>
+						<ReportsIcon color={$page.url.pathname === '/reports' ? '#121929' : "#121929"} />
 					</div>
 					<span class:visible={open}>Reports</span>
 				</a>
 			</li>
-			<li>
+			<li aria-current={$page.url.pathname === '/transactions' ? 'page' : undefined}>
 				<a href="/transactions">
-					<div aria-current={$page.url.pathname === '/transactions' ? 'page' : undefined}>
-						<TransactionsIcon color={$page.url.pathname === '/transactions' ? '#121929' : "#97A3B6"} />
+					<div>
+						<TransactionsIcon color={$page.url.pathname === '/transactions' ? '#121929' : "#121929"} />
 					</div>
 					<span class:visible={open}>Transactions</span>
 				</a>
@@ -123,34 +123,24 @@
 		flex-direction: column;
 		justify-content: center;
 		transition: 0.3s ease-in-out;
-		height: 98%;
+		height: 100%;
 		z-index: 1;
 		min-width: 44px;
-		width:44px;
-		padding: 0px 16px;
-		margin-top: 2px;
-
-		/* background: #111727; */
-		/* border-radius: 20px; */
-		/* background-color: rgb(248, 250, 252); */
-		/* border-right: 1px solid #e5e7eb; */
+		width:40px;
+		padding: 0px 8px;
+		/* border-top-right-radius: 24px;
+		border-bottom-right-radius: 24px; */
+		/* background: radial-gradient(516.18% 38.76% at 50% 61.24%, rgba(30, 170, 226, 0.2) 0%, rgba(30, 170, 226, 0) 100%), rgba(110, 200, 194, 0.2); */
+		background-color: #f3f5f9;
+		box-shadow: inset -1px 0px 1px rgba(0, 0, 0, 0.05);
+		border-right: 0.5px solid rgba(0,0,0,0.1);
 	}
 
-	.corner {
+	.logo {
 		position: absolute;
-        padding-left: 55px;
-        top: 35px;
+        padding-left: 50px;
+        top: 37px;
     }
-
-	.footer {
-		white-space: nowrap;
-		visibility: hidden;
-		font-size: 12px;
-		color: rgb(100,116,139);
-		opacity: 0;
-		transition: 0.3s;
-	}
-
 
 
 	nav {
@@ -185,7 +175,7 @@
 		padding-left: 2px;
 	}
 	li:hover {
-		background-color: rgba(27, 27, 40, 0.03);
+		background-color: #f3f5f9;
 	}
 
 
@@ -193,9 +183,9 @@
 		outline: 1.5px solid #18191A;
 	} */
 
-	[aria-current='page'] {
-		outline: 1.5px solid #121929;
-		padding: 8px;
+	[aria-current='page']  {
+		outline: 1.5px solid #15181E;
+		/* padding: 8px; */
 		border-radius: 100px;
 	}
 	li div {
@@ -203,7 +193,7 @@
 	}
 
 	[aria-current='page'] ~ span {
-		color: #121929;
+		color: #15181E;
 	}
 
 	/* li[aria-current='page']::before {
@@ -222,7 +212,7 @@
 	nav a {
 		white-space: nowrap;
 		display: flex;
-		gap:12px;
+		gap:6px;
 		height: 44px;
 		align-items: center;
 		color: var(--color-text);
@@ -234,7 +224,7 @@
 	}
 	nav a span {
 		visibility: hidden;
-		color: #788395;
+		color: #15181E;
 		opacity: 0;
 		transition: 0.3s;
 	}
@@ -252,7 +242,7 @@
 	}
 	.darkmode-selector p {
 		visibility: hidden;
-		color: #99A3B4;
+		color: #15181E;
 		font-weight: 500;
 		font-size: 12px;
 		white-space: nowrap;
@@ -293,7 +283,7 @@
         font-weight: 500;
         font-size: 14px;
         line-height: 17px;
-        color: #121929;
+        color: #15181E;
         transition: 0.3s;
     }
     .description {

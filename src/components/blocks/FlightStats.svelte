@@ -32,7 +32,7 @@
 				<div class="group-top">
 					<div class="title-group">
 						<h3>Flights Stats</h3>
-						<p>Something that explains all this shit</p>
+						<p>Something that explains all and maybe more</p>
 					</div>
 					<div class="right-tools">
 						<Period />
@@ -104,8 +104,8 @@
 	.title-group {
 		display: flex;
 		flex-direction: column;
-		gap: 4px;
-		padding: 16px 0px 16px 24px;
+		gap: 6px;
+		padding: 16px 0px 16px 20px;
 	}
 	.title-group p {
 		margin: 0;
@@ -115,10 +115,11 @@
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 19px;
-		color: #A4A9AC;
+		letter-spacing: 0.02em;
+		color: rgba(21, 24, 30, 0.64);
 	}
 	.block {
-		margin-top: 24px;
+		margin-top: 12px;
 		display: flex;
 		flex-direction: row;
         gap: 12px;
@@ -135,17 +136,17 @@
 	.metrics {
 		display: flex;
 		flex-direction: column;
-		gap: 10px;
+		gap: 4px;
 		/* background-color: #F7F7F7; */
-		background: #F0F1F2;
+		background: #e9ecf5;
 		/* background: radial-gradient(circle, rgba(217,217,217,0.5) 10%, rgba(247,247,247,1) 50%); */
-		padding: 10px;
-		border-radius: 24px;
+		padding: 4px;
+		border-radius: 22px;
 	}
 	.cell-row {
 		display: flex;
 		flex-direction: row;
-		gap: 12px;
+		gap: 4px;
 	}
 	.cell {
 		display: flex;
@@ -175,14 +176,14 @@
 	.cell p:first-child {
 		font-size: 15px;
 		/* color: rgb(100,116,139); */
-		color: #A4A9AC;
+		color: rgba(21, 24, 30, 0.64);
 		margin: 0;
 	}
 	.cell p:nth-child(2) {
 		font-size: 25px;
 		margin: 0;
 		margin-bottom: -2px;
-		color: #4D5562;
+		color: #15181E;
 		/* margin-bottom: 15px; */
 	}
 	.right-map {
@@ -195,21 +196,23 @@
 	h2 {
 		font-family: 'Manrope';
 		font-style: normal;
-		font-weight: 600;
+		font-weight: 500;
 		font-size: 32px;
+		font-weight: 400;
 		line-height: 44px;
 		/* identical to box height */
 
-		letter-spacing: -0.04em;
+		letter-spacing: -0.03em;
 
-		color: #121929;
+		color: #15181E;
+		opacity: 0.5;
 		width: 100%;
 		margin:0;
 	}
 	h3 {
 		font-family: 'Manrope';
-		color: #4D5562;
-		letter-spacing: -0.03em;
+		color: #15181E;
+		letter-spacing: -0.02em;
 		font-weight: 600;
 		font-size: 18px;
 		line-height: 25px;

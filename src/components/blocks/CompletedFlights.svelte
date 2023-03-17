@@ -15,7 +15,7 @@
     <div class="group-top">
         <div class="title-group">
             <h3>Completed Flights</h3>
-            <p>Another description that explains all this shit</p>
+            <p>Another description that explains all</p>
         </div>
 		<div class="right-tools">
 			<Period />
@@ -63,8 +63,8 @@
     .title-group {
 		display: flex;
 		flex-direction: column;
-		gap: 4px;
-		padding: 16px 0px 16px 24px;
+		gap: 6px;
+		padding: 16px 0px 16px 20px;
 	}
     .title-group p {
 		margin: 0;
@@ -72,16 +72,17 @@
 		font-family: 'Manrope';
 		font-style: normal;
 		font-weight: 400;
+		letter-spacing: 0.02em;
 		font-size: 14px;
 		line-height: 19px;
-		color: #A4A9AC;
+		color: rgba(21, 24, 30, 0.64);
 	}
 	.block {
 		display: flex;
 		flex-direction: column;
 		gap: 16px;
-		background-color: #F0F1F2;
-		padding: 24px 10px 24px 34px;
+		background-color: #f3f5f9;
+		padding: 20px 10px 20px 30px;
 		border-bottom-left-radius: 24px;
 		border-bottom-right-radius: 24px;
 		border-top: 1px solid #E5E7EB;
@@ -124,8 +125,8 @@
 	}
     h3 {
 		font-family: 'Manrope';
-		color: #4D5562;
-		letter-spacing: -0.03em;
+		color: #15181E;
+		letter-spacing: -0.02em;
 		font-weight: 600;
 		font-size: 18px;
 		line-height: 25px;

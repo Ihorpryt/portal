@@ -43,7 +43,8 @@
         height: 100%;
         border-radius: 50px;
         transition: 0.3s;
-        background-color: #d8dbe0;
+        background-color: #fff;
+        outline: 1.5px solid #E5E7EB;
         }
 
         input:checked ~ .slider {
@@ -65,7 +66,16 @@
         height: 16px;
         border-radius: 50%;
         box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5), 0px 0px 0px 4px rgba(255, 255, 255, 0.25),0px 0px 0px 6px rgba(255, 255, 255, 0.25);
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 65.62%), #CFCFCF;
+        background: linear-gradient(180deg, rgba(207, 105, 105, 0.4) 0%, rgba(249, 177, 177, 0) 100%), #FFC700;
         transition: 0.3s;
+        outline: 2px solid rgba(255, 234, 180, 0.4);
+        }
+
+        :global(body.dark-mode) .slider::before {
+            outline: none;
+            background: none;
+        }
+        :global(body.dark-mode) .slider {
+            outline: none;
         }
     </style>
