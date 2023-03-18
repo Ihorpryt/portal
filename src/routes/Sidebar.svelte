@@ -139,7 +139,7 @@
 	.logo {
 		position: absolute;
         padding-left: 50px;
-        top: 37px;
+        top: 24px;
     }
 
 
@@ -150,7 +150,7 @@
 		align-items: flex-start;
 		--background: rgba(255, 255, 255, 0.7);
 		/* height: 100%; */
-		margin-top: 65px;
+		margin-top: 48px;
 		flex: 1;
 	}
 

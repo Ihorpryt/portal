@@ -66,7 +66,7 @@
 		margin-left: 156px;
 	} */
     .collapse-btn-wrapper {
-        top: 25px;
+        top: 12px;
         left: 8px;
         position: fixed;
 		z-index: 80;
