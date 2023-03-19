@@ -5,10 +5,16 @@
     import ButtonSmall from "../../components/Button_Small.svelte";
     import TransactionDatesSelect from "../../components/TransactionDatesSelect.svelte";
     import Caret from "../../lib/images/icons/caret.svelte";
+	import Settings from "../../lib/images/icons/settings.svelte";
     import Comment from "../../lib/images/icons/comment.svelte";
+    import ExpandColumn from "../../lib/images/icons/expand-column.svelte";
     import Expand from "../../lib/images/icons/expand.svelte";
     import Mark from "../../lib/images/icons/mark.svelte";
     import Plus from "../../lib/images/icons/plus.svelte";
+    import DocumentSmall from "../../lib/images/icons/document-small.svelte";
+    import ArrowDwn from "../../lib/images/icons/arrow-dwn.svelte";
+    import MarkRed from "../../lib/images/icons/mark-red.svelte";
+    import Label from "../../components/Label.svelte";
 
 	const items = [
     { text: 'Number of Transactions', currency: '', amount: '52' },
@@ -56,7 +62,14 @@
 	</div>
 
 	<div class="table-controls">
-		<ButtonSmall><div class="ddsds">Group by:</div>  None <Caret/></ButtonSmall>
+		<div class="left-part">
+			<ButtonSmall><div class="group-by">Group by:</div>  None <Caret/></ButtonSmall>
+		</div>
+		<div class="right-part">
+			<ButtonSmall><DocumentSmall/><ArrowDwn/> </ButtonSmall>
+			<ButtonSmall> <Settings/> Columns <Caret/></ButtonSmall>
+			<ButtonSmall><ExpandColumn/></ButtonSmall>
+		</div>
 	</div>
 
 	<div class="grid">
@@ -72,7 +85,7 @@
 			<div class="item">Aircraft</div>
 		</div>
 
-		{#each Array(20) as _, index}
+		<!-- {#each Array(20) as _, index}
 		<div class="row">
 			<div class="item-content number">{index + 1} <Expand /></div>
 			<div class="item-content review"><Mark/> <Comment/></div>
@@ -84,7 +97,227 @@
 			<div class="item-content">January 2017</div>
 			<div class="item-content">January 2017</div>
 		</div>
-		{/each}
+		{/each} -->
+		<div class="row">
+			<div class="item-content number">1 <Expand /></div>
+			<div class="item-content review"><Mark/> </div>
+			<div class="item-content">17 Jan 2023</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">Fuel</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content"><Label variant="green">Published</Label></div>
+			<div class="item-content">January 2017</div>
+		</div>
+		<div class="row">
+			<div class="item-content number">2 <Expand /></div>
+			<div class="item-content review"><Mark/> <Comment/></div>
+			<div class="item-content">17 Jan 2023</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">Fuel</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content"><Label variant="green">Published</Label></div>
+			<div class="item-content">January 2017</div>
+		</div>
+		<div class="row">
+			<div class="item-content number">3 <Expand /></div>
+			<div class="item-content review"><MarkRed/> <Comment/></div>
+			<div class="item-content">17 Jan 2023</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">Fuel</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content"><Label variant="green">Published</Label></div>
+			<div class="item-content">January 2017</div>
+		</div>
+		<div class="row">
+			<div class="item-content number">4 <Expand /></div>
+			<div class="item-content review"><MarkRed/> <Comment/></div>
+			<div class="item-content">17 Jan 2023</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">Fuel</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content"><Label variant="green">Published</Label></div>
+			<div class="item-content">January 2017</div>
+		</div>
+		<div class="row">
+			<div class="item-content number">5 <Expand /></div>
+			<div class="item-content review"><Mark/></div>
+			<div class="item-content">17 Jan 2023</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">Fuel</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content"><Label variant="green">Published</Label></div>
+			<div class="item-content">January 2017</div>
+		</div>
+		<div class="row">
+			<div class="item-content number">6 <Expand /></div>
+			<div class="item-content review"><Mark/> </div>
+			<div class="item-content">17 Jan 2023</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">Fuel</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content"><Label variant="grey">Not published</Label></div>
+			<div class="item-content">January 2017</div>
+		</div>
+		<div class="row">
+			<div class="item-content number">7 <Expand /></div>
+			<div class="item-content review"><Mark/> </div>
+			<div class="item-content">17 Jan 2023</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">Fuel</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content"><Label variant="grey">Not published</Label></div>
+			<div class="item-content">January 2017</div>
+		</div>
+		<div class="row">
+			<div class="item-content number">8 <Expand /></div>
+			<div class="item-content review"><Mark color="#6EC8C2"/> <Comment/></div>
+			<div class="item-content">17 Jan 2023</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">Fuel</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content"><Label variant="grey">Not published</Label></div>
+			<div class="item-content">January 2017</div>
+		</div>
+		<div class="row">
+			<div class="item-content number">9 <Expand /></div>
+			<div class="item-content review"><Mark color="#6EC8C2"/> <Comment/></div>
+			<div class="item-content">17 Jan 2023</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">Fuel</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content"><Label variant="grey">Not published</Label></div>
+			<div class="item-content">January 2017</div>
+		</div>
+		<div class="row">
+			<div class="item-content number">10 <Expand /></div>
+			<div class="item-content review"><Mark/> </div>
+			<div class="item-content">17 Jan 2023</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">Fuel</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content"><Label variant="grey">Not published</Label></div>
+			<div class="item-content">January 2017</div>
+		</div>
+		<div class="row">
+			<div class="item-content number">11 <Expand /></div>
+			<div class="item-content review"><Mark color="#6EC8C2"/></div>
+			<div class="item-content">17 Jan 2023</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">Fuel</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content"><Label variant="grey">Not published</Label></div>
+			<div class="item-content">January 2017</div>
+		</div>
+		<div class="row">
+			<div class="item-content number">12 <Expand /></div>
+			<div class="item-content review"><Mark/> </div>
+			<div class="item-content">17 Jan 2023</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">Fuel</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content"><Label variant="grey">Not published</Label></div>
+			<div class="item-content">January 2017</div>
+		</div>
+		<div class="row">
+			<div class="item-content number">13 <Expand /></div>
+			<div class="item-content review"><Mark/> </div>
+			<div class="item-content">17 Jan 2023</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">Fuel</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content"><Label variant="grey">Not published</Label></div>
+			<div class="item-content">January 2017</div>
+		</div>
+		<div class="row">
+			<div class="item-content number">14 <Expand /></div>
+			<div class="item-content review"><Mark/></div>
+			<div class="item-content">17 Jan 2023</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">Fuel</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content"><Label variant="grey">Not published</Label></div>
+			<div class="item-content">January 2017</div>
+		</div>
+		<div class="row">
+			<div class="item-content number">15 <Expand /></div>
+			<div class="item-content review"><Mark/></div>
+			<div class="item-content">17 Jan 2023</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">Fuel</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content"><Label variant="grey">Not published</Label></div>
+			<div class="item-content">January 2017</div>
+		</div>
+		<div class="row">
+			<div class="item-content number">16 <Expand /></div>
+			<div class="item-content review"><Mark/> </div>
+			<div class="item-content">17 Jan 2023</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">Fuel</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content"><Label variant="grey">Not published</Label></div>
+			<div class="item-content">January 2017</div>
+		</div>
+		<div class="row">
+			<div class="item-content number">17 <Expand /></div>
+			<div class="item-content review"><Mark/> <Comment/></div>
+			<div class="item-content">17 Jan 2023</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">Fuel</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content"><Label variant="grey">Not published</Label></div>
+			<div class="item-content">January 2017</div>
+		</div>
+		<div class="row">
+			<div class="item-content number">18 <Expand /></div>
+			<div class="item-content review"><Mark/> <Comment/></div>
+			<div class="item-content">17 Jan 2023</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">Fuel</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content"><Label variant="grey">Not published</Label></div>
+			<div class="item-content">January 2017</div>
+		</div>
+		<div class="row">
+			<div class="item-content number">19 <Expand /></div>
+			<div class="item-content review"><Mark/> <Comment/></div>
+			<div class="item-content">17 Jan 2023</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">Fuel</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content"><Label variant="grey">Not published</Label></div>
+			<div class="item-content">January 2017</div>
+		</div>
+		<div class="row">
+			<div class="item-content number">20 <Expand /></div>
+			<div class="item-content review"><Mark/> <Comment/></div>
+			<div class="item-content">17 Jan 2023</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">Fuel</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content"><Label variant="grey">Not published</Label></div>
+			<div class="item-content">January 2017</div>
+		</div>
 
 
 	</div>
@@ -94,8 +327,8 @@
 
 
 <style>
-	.ddsds {
-		color: aqua;
+	.group-by {
+		color: rgba(21, 24, 30, 0.64);
 	}
 	.content {
 		display: flex;
@@ -169,6 +402,13 @@
 		height: 40px;
 		justify-content: flex-start;
     	align-items: center;
+		justify-content: space-between;
+	}
+	.right-part {
+		display: flex;
+		gap: 4px;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.grid {
@@ -215,7 +455,7 @@
 
 		font-family: 'Manrope';
 		font-style: normal;
-		font-weight: 500;
+		font-weight: 400;
 		font-size: 13px;
 		line-height: 18px;
 	}

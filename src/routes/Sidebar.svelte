@@ -187,6 +187,8 @@
 		outline: 1.5px solid #15181E;
 		/* padding: 8px; */
 		border-radius: 100px;
+		/* background: white; */
+		/* box-shadow: 0 0 2px rgba(0,0,0,.1), 0 2px 4px rgba(0,0,0,.1); */
 	}
 	li div {
 		padding: 8px;
