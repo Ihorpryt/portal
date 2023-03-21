@@ -12,13 +12,13 @@
         flex-direction: row;
         align-items: center;
         gap: 12px;
-        height: 48px;
+        height: 40px;
         /* border: 1px solid #ccc; */
         border: none;
         padding: 0 18px;
         border-radius: 40px;
         background-color: white;
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 600;
         cursor: pointer;
 

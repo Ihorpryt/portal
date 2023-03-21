@@ -1,5 +1,5 @@
 <script>
-    import Button from "../Button.svelte";
+    import Button from "../Button_Secondary.svelte";
     import Chart1 from "../Chart1.svelte";
     import Tabs from "../Tabs.svelte";
     import CompletedFlights from "./CompletedFlights.svelte";
@@ -109,14 +109,13 @@
 	}
 	.title-group p {
 		margin: 0;
-		font-size: 14px;
 		font-family: 'Manrope';
 		font-style: normal;
 		font-weight: 400;
-		font-size: 14px;
-		line-height: 19px;
+		font-size: 13px;
+		line-height: 18px;
+		color: var(--color-text-2);
 		letter-spacing: 0.02em;
-		color: rgba(21, 24, 30, 0.64);
 	}
 	.block {
 		margin-top: 12px;
@@ -174,16 +173,17 @@
 	}
 
 	.cell p:first-child {
-		font-size: 15px;
+		font-size: 13px;
+		line-height: 18px;
 		/* color: rgb(100,116,139); */
-		color: rgba(21, 24, 30, 0.64);
+		color: var(--color-text-2);
 		margin: 0;
 	}
 	.cell p:nth-child(2) {
-		font-size: 25px;
+		font-size: 24px;
 		margin: 0;
 		margin-bottom: -2px;
-		color: #15181E;
+		color: var(--color-text);
 		/* margin-bottom: 15px; */
 	}
 	.right-map {
@@ -191,32 +191,6 @@
 		background-size: cover;
         border-radius: 24px;
 		width: 100%;
-	}
-
-	h2 {
-		font-family: 'Manrope';
-		font-style: normal;
-		font-weight: 500;
-		font-size: 32px;
-		font-weight: 400;
-		line-height: 44px;
-		/* identical to box height */
-
-		letter-spacing: -0.03em;
-
-		color: #15181E;
-		opacity: 0.5;
-		width: 100%;
-		margin:0;
-	}
-	h3 {
-		font-family: 'Manrope';
-		color: #15181E;
-		letter-spacing: -0.02em;
-		font-weight: 600;
-		font-size: 18px;
-		line-height: 25px;
-		margin: 0;
 	}
 
 	:global(body.dark-mode) .left-cell-group {

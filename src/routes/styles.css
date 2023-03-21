@@ -11,6 +11,8 @@
 	--color-theme-2: #40b3ff;
 	--color-text: #15181E;
 	--color-text-2: rgba(21, 24, 30, 0.64);
+	--green: #5DC771;
+	--red: #E75B36;
 	--column-width: 42rem;
 	--column-margin-top: 4rem;
 	font-family: var(--font-body);
@@ -33,9 +35,31 @@ body {
 }
 
 h1,
-h2,
 p {
 	font-weight: 400;
+}
+
+h2 {
+	font-family: 'Manrope';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 40px;
+	/* identical to box height */
+
+	letter-spacing: -0.02em;
+
+	color: #121929;
+	width: 100%;
+	margin:0;
+}
+
+h3 {
+	font-family: 'Manrope';
+	color: var(--color-text);
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 25px;
+	margin: 0;
 }
 
 p {
@@ -54,10 +78,6 @@ a:hover {
 h1 {
 	font-size: 2rem;
 	text-align: center;
-}
-
-h2 {
-	font-size: 1rem;
 }
 
 pre {

@@ -1,6 +1,6 @@
 <script>
     import AircraftSelect from "../../components/AircraftSelect.svelte";
-	import Button from "../../components/Button.svelte";
+	import Button from "../../components/Button_Secondary.svelte";
     import ButtonPrimary from "../../components/Button_Primary.svelte";
     import ButtonSmall from "../../components/Button_Small.svelte";
     import TransactionDatesSelect from "../../components/TransactionDatesSelect.svelte";
@@ -15,6 +15,7 @@
     import ArrowDwn from "../../lib/images/icons/arrow-dwn.svelte";
     import MarkRed from "../../lib/images/icons/mark-red.svelte";
     import Label from "../../components/Label.svelte";
+    import ArrowOpen from "../../lib/images/icons/arrow-open.svelte";
 
 	const items = [
     { text: 'Number of Transactions', currency: '', amount: '52' },
@@ -35,6 +36,11 @@
 		{number: 'Aircraft'},
 	];
 
+	let open = false;
+
+	function handleClick() {
+		open = !open
+	}
 </script>
 
 <svelte:head>
@@ -57,8 +63,14 @@
 
 	<div class="metrics">
 		{#each items as item}
-			<div class="metrics_item">{item.text} <div class="metrics_right-info">{item.currency} {item.amount}</div></div>
+			<div class="metrics_item" class:open>{item.text} <div class="metrics_right-info">{item.currency} {item.amount}</div></div>
 		{/each}
+		<!-- svelte-ignore a11y-click-events-have-key-events -->
+		<div class="arrow-control" on:click={handleClick}>
+			<div class="arrow-icon" class:turn="{open === true}">
+				<ArrowOpen />
+			</div>
+		</div>
 	</div>
 
 	<div class="table-controls">
@@ -177,7 +189,7 @@
 		</div>
 		<div class="row">
 			<div class="item-content number">8 <Expand /></div>
-			<div class="item-content review"><Mark color="#6EC8C2"/> <Comment/></div>
+			<div class="item-content review"><Mark color="var(--green)"/> <Comment/></div>
 			<div class="item-content">17 Jan 2023</div>
 			<div class="item-content">January 2017</div>
 			<div class="item-content">Fuel</div>
@@ -188,7 +200,7 @@
 		</div>
 		<div class="row">
 			<div class="item-content number">9 <Expand /></div>
-			<div class="item-content review"><Mark color="#6EC8C2"/> <Comment/></div>
+			<div class="item-content review"><Mark color="var(--green)"/> <Comment/></div>
 			<div class="item-content">17 Jan 2023</div>
 			<div class="item-content">January 2017</div>
 			<div class="item-content">Fuel</div>
@@ -210,7 +222,7 @@
 		</div>
 		<div class="row">
 			<div class="item-content number">11 <Expand /></div>
-			<div class="item-content review"><Mark color="#6EC8C2"/></div>
+			<div class="item-content review"><Mark color="var(--green)"/></div>
 			<div class="item-content">17 Jan 2023</div>
 			<div class="item-content">January 2017</div>
 			<div class="item-content">Fuel</div>
@@ -328,7 +340,7 @@
 
 <style>
 	.group-by {
-		color: rgba(21, 24, 30, 0.64);
+		color: var(--color-text-2);
 	}
 	.content {
 		display: flex;
@@ -349,46 +361,59 @@
 		flex-direction: row;
 		gap: 12px;
 	}
-	h2 {
-		font-family: 'Manrope';
-		font-style: normal;
-		font-weight: 600;
-		font-size: 32px;
-		line-height: 44px;
-		/* identical to box height */
-
-		letter-spacing: -0.04em;
-
-		color: #121929;
-		width: 100%;
-		margin:0;
-	}
 
 	.metrics {
 		background: #e9ecf5;
 		padding: 4px;
 		display: flex;
 		flex-direction: row;
-		border-radius: 100px;
+		border-radius: 24px;
 		gap: 4px;
 		/* width: 100%; */
-		margin-top: 24px;
+		margin-top: 8px;
+		transition: 0.3s;
 	}
 	.metrics_item {
 		display: flex;
 		flex-direction: row;
 		width: 100%;
-		font-family: 'Manrope';
-		font-style: normal;
+
 		font-weight: 500;
-		font-size: 14px;
-		line-height: 20px;
+		font-size: 13px;
+		line-height: 18px;
 		justify-content: space-between;
 		padding: 12px 24px;
 		background-color: white;
-		border-radius: 100px;
+		border-radius: 21px;
+		transition: 0.3s;
 
-		color: rgba(21, 24, 30, 0.64);
+		color: var(--color-text-2);
+	}
+	.open {
+		flex-direction: column;
+		gap: 6px;
+	}
+	.open .metrics_right-info {
+		font-size: 24px;
+		font-weight: 400;
+	}
+	.arrow-control {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: white;
+		border-radius: 100px;
+		min-width: 44px;
+		cursor: pointer;
+	}
+	.arrow-icon {
+		transition: 0.3s ease;
+	}
+	.turn {
+		transform: rotate(180deg);
+	}
+	.arrow-control:hover {
+		background-color: #F6F6F8;
 	}
 	.metrics_right-info {
 		display: flex;
@@ -436,13 +461,13 @@
 		text-align: center;
 		border-right: 1px solid #E5E7EB;
 		width: 100%;
-		height: 32px;
+		height: 24px;
 
 		font-family: 'Manrope';
 		font-style: normal;
 		font-weight: 600;
-		font-size: 13px;
-		line-height: 18px;
+		font-size: 11px;
+		line-height: 16px;
 	}
 	.item-content {
 		display: flex;

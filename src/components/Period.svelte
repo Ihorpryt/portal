@@ -4,8 +4,8 @@
 
     let items = [
         { value: 'last 3 months', label: 'Last 3 months' },
-        { value: 'two', label: 'Two' },
-        { value: 'three', label: 'Three' },
+        { value: 'last 6 months', label: 'Last 6 months' },
+        { value: 'last 12 months', label: 'Last 12 months' },
     ];
 </script>
 
@@ -20,14 +20,15 @@
         class="foo"
         --background="none"
         --border="0"
-        --border-radius="100px"    
-        --font-size="14px" 
-        --height="48px" 
+        --border-radius="24px"    
+        --font-size="13px"
+        --height="40px" 
         --internal-padding="18px"  
         --selected-item-padding="14px 0 0 0"
         --border-hover="0"
         --border-focused="0"
-        --chevron-width="48px"
+        --chevron-width="40px"
+        --selected-item-font-weight="500"
         >
 
         <div slot="chevron-icon">
@@ -41,21 +42,23 @@
         cursor: pointer !important;
     }
     :global(.foo) {
-        width: 162px !important;
+        width: 150px !important;
         cursor: pointer !important; 
     }
     :global(.foo):hover {
         background: #F6F6F8 !important;
     }
     label {
+        pointer-events: none;
         font-family: 'Manrope';
         font-style: normal;
         font-weight: 500;
-        font-size: 12px;
+        font-size: 11px;
+        letter-spacing: 0.01em;
         line-height: 16px;
-        color: rgba(77, 85, 98, 0.7);
-        margin-left: 17px;
-        margin-top: 7px;
+        color: var(--color-text-2);
+        margin-left: 16px;
+        margin-top: 4px;
         position: absolute;
         z-index: 10;
     }

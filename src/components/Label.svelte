@@ -23,7 +23,7 @@ class:grey={variant==='grey'}
 		line-height: 18px;
     }
     .green {
-        background-color: #6EC8C2
+        background-color: var(--green);
     }
     .grey {
         background-color: #D7D8D9;

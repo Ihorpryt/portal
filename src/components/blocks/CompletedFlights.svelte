@@ -1,5 +1,5 @@
 <script>
-    import Button from "../Button.svelte";
+    import Button from "../Button_Secondary.svelte";
 	import Tabs from "../Tabs.svelte";
 	import Period from "../Period.svelte";
 
@@ -68,14 +68,13 @@
 	}
     .title-group p {
 		margin: 0;
-		font-size: 14px;
 		font-family: 'Manrope';
 		font-style: normal;
 		font-weight: 400;
 		letter-spacing: 0.02em;
-		font-size: 14px;
-		line-height: 19px;
-		color: rgba(21, 24, 30, 0.64);
+		font-size: 13px;
+		line-height: 18px;
+		color: var(--color-text-2);
 	}
 	.block {
 		display: flex;
@@ -101,13 +100,13 @@
 	.months p:first-child {
 		width: 100px;
 		margin: 0;
-		font-size: 14px;
+		font-size: 13px;
 	}
 	.months p:nth-child(2) {
 		width: 50px;
 		text-align: end;
 		margin: 0 24px 0 0;
-		font-size: 14px;
+		font-size: 13px;
 	}
 	.rectangle {
 		background-color: #0373B7;
@@ -122,15 +121,6 @@
 	.middle {
 		width: 450px;
 		background-color: #1EAAE2;
-	}
-    h3 {
-		font-family: 'Manrope';
-		color: #15181E;
-		letter-spacing: -0.02em;
-		font-weight: 600;
-		font-size: 18px;
-		line-height: 25px;
-		margin: 0;
 	}
 	:global(body.dark-mode) .left-cell-group {
 		background: #242526;

@@ -36,7 +36,7 @@
         margin: 0 15px;
         cursor: pointer;
         color: #788395;
-        font-size: 15px;
+        font-size: 13px;
         font-weight: 500;
     }
     li:first-child {

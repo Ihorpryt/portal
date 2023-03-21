@@ -16,9 +16,9 @@
         background-color: white;
         font-family: 'Manrope';
         font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 19px;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 18px;
         cursor: pointer;
 
         transition: 0.3s;

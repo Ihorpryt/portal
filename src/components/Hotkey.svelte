@@ -1,5 +1,5 @@
 <div class="hotkey">
-    [
+    M
 </div>
 
 <style>

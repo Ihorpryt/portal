@@ -23,7 +23,7 @@
 
 <style>
 	section {
-		margin-top: 12px;
+		margin-top: 24px;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
