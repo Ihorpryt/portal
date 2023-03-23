@@ -139,7 +139,7 @@
 	.logo {
 		position: absolute;
         padding-left: 50px;
-        top: 24px;
+        top: 40px;
     }
 
 
@@ -150,7 +150,7 @@
 		align-items: flex-start;
 		--background: rgba(255, 255, 255, 0.7);
 		/* height: 100%; */
-		margin-top: 48px;
+		margin-top: 68px;
 		flex: 1;
 	}
 
@@ -184,10 +184,10 @@
 	} */
 
 	[aria-current='page']  {
-		outline: 1.5px solid #15181E;
+		/* outline: 1.5px solid #15181E; */
 		/* padding: 8px; */
 		border-radius: 100px;
-		/* background: white; */
+		background: #D7DDE9;
 		/* box-shadow: 0 0 2px rgba(0,0,0,.1), 0 2px 4px rgba(0,0,0,.1); */
 	}
 	li div {
@@ -195,7 +195,7 @@
 	}
 
 	[aria-current='page'] ~ span {
-		color: #15181E;
+		color: var(--color-text);
 	}
 
 	/* li[aria-current='page']::before {
@@ -226,7 +226,7 @@
 	}
 	nav a span {
 		visibility: hidden;
-		color: #15181E;
+		color: var(--color-text);
 		opacity: 0;
 		transition: 0.3s;
 	}
@@ -244,7 +244,7 @@
 	}
 	.darkmode-selector p {
 		visibility: hidden;
-		color: #15181E;
+		color: var(--color-text);
 		font-weight: 500;
 		font-size: 12px;
 		white-space: nowrap;
@@ -309,5 +309,8 @@
 	:global(body.dark-mode) [aria-current='page'] {
 		outline: 1.5px solid white;
 		background: rgba(255, 255, 255, 0.9);
+	}
+	:global(body.dark-mode) header {
+		background: #2E2F30;
 	}
 </style>

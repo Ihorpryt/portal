@@ -136,4 +136,7 @@
 	:global(body.dark-mode) .months p {
 		color: #fff;
 	}
+	:global(body.dark-mode) .title-group p {
+		color:rgba(255, 255, 255, 0.75);
+	}
 </style>

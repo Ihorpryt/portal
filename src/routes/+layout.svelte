@@ -9,7 +9,7 @@
     $: console.log(open)
 
     function onKeydown(e) {
-        if (e.keyCode === 219) {
+        if (e.keyCode === 77) {
             open = !open
         }
     }
@@ -66,7 +66,7 @@
 		margin-left: 156px;
 	} */
     .collapse-btn-wrapper {
-        top: 12px;
+        top: 28px;
         left: 8px;
         position: fixed;
 		z-index: 80;

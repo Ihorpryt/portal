@@ -206,10 +206,16 @@
 	:global(body.dark-mode) .cell p:nth-child(2) {
 		color: white;
 	}
+	:global(body.dark-mode) .cell p:nth-child(1) {
+		color: rgba(255, 255, 255, 0.75);
+	}
 	:global(body.dark-mode) h3 {
 		color:white;
 	}
 	:global(body.dark-mode) h2 {
 		color: white;
+	}
+	:global(body.dark-mode) .title-group p {
+		color:rgba(255, 255, 255, 0.75);
 	}
 </style>
