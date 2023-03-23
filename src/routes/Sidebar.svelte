@@ -13,7 +13,6 @@
 	export let open;
     // $: console.log(open)
 
-
 	
 </script>
 
@@ -35,7 +34,8 @@
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
 				<a href="/">
 					<div>
-						<DashboardIcon color={$page.url.pathname === '/' ? '#121929' : "#121929"} />
+						<!-- <DashboardIcon color={$page.url.pathname === '/' ? '#15181E' : 'var(--color-text-2)'} /> -->
+						<DashboardIcon />
 					</div>
 					<span class:visible={open} >Dashboard</span>
 				</a>
@@ -43,7 +43,7 @@
 			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
 				<a href="/about">
 					<div >
-						<CalendarIcon color={$page.url.pathname === '/about' ? '#121929' : "#121929"} />
+						<CalendarIcon color={$page.url.pathname === '/about' ? '#121929' : "var(--color-text-2)"} />
 					</div>
 					<span class:visible={open}>Calendar</span>
 				</a>
@@ -51,7 +51,7 @@
 			<li aria-current={$page.url.pathname === '/invoices' ? 'page' : undefined}>
 				<a href="/invoices">
 					<div>
-						<InvoicesIcon color={$page.url.pathname === '/invoices' ? '#121929' : "#121929"} />
+						<InvoicesIcon color={$page.url.pathname === '/invoices' ? '#121929' : "var(--color-text-2)"} />
 					</div>
 					<span class:visible={open}>Invoices</span>
 				</a>
@@ -59,7 +59,7 @@
 			<li aria-current={$page.url.pathname === '/metricandstats' ? 'page' : undefined}>
 				<a href="/metricandstats">
 					<div>
-						<MetricsIcon color={$page.url.pathname === '/metricandstats' ? '#121929' : "#121929"} />
+						<MetricsIcon color={$page.url.pathname === '/metricandstats' ? '#121929' : "var(--color-text-2)"} />
 					</div>
 					<span class:visible={open}>Metrics & Stats</span>
 				</a>
@@ -67,7 +67,7 @@
 			<li aria-current={$page.url.pathname === '/crew' ? 'page' : undefined}>
 				<a href="/crew">
 					<div>
-						<CrewIcon color={$page.url.pathname === '/crew' ? '#121929' : "#121929"} />
+						<CrewIcon color={$page.url.pathname === '/crew' ? '#121929' : "var(--color-text-2)"} />
 					</div>
 					<span class:visible={open}>Crew</span>
 				</a>
@@ -75,7 +75,7 @@
 			<li aria-current={$page.url.pathname === '/reports' ? 'page' : undefined}>
 				<a href="/reports">
 					<div>
-						<ReportsIcon color={$page.url.pathname === '/reports' ? '#121929' : "#121929"} />
+						<ReportsIcon color={$page.url.pathname === '/reports' ? '#121929' : "var(--color-text-2)"} />
 					</div>
 					<span class:visible={open}>Reports</span>
 				</a>
@@ -83,7 +83,7 @@
 			<li aria-current={$page.url.pathname === '/transactions' ? 'page' : undefined}>
 				<a href="/transactions">
 					<div>
-						<TransactionsIcon color={$page.url.pathname === '/transactions' ? '#121929' : "#121929"} />
+						<TransactionsIcon color={$page.url.pathname === '/transactions' ? '#121929' : "var(--color-text-2)"} />
 					</div>
 					<span class:visible={open}>Transactions</span>
 				</a>
@@ -173,29 +173,33 @@
 		position: relative;
 		border-radius: 50px;
 		padding-left: 2px;
+		
 	}
 	li:hover {
-		background-color: #f3f5f9;
+		background-color: rgba(0, 0, 0, 0.05);
 	}
-
+	span {
+		color: var(--color-text-2) !important;
+		font-weight: 600;
+	}
 
 	/* li[aria-current='page'] {
 		outline: 1.5px solid #18191A;
 	} */
 
 	[aria-current='page']  {
-		/* outline: 1.5px solid #15181E; */
+		outline: 1.5px solid #15181E;
 		/* padding: 8px; */
 		border-radius: 100px;
-		background: #D7DDE9;
+		/* background: #D7DDE9; */
 		/* box-shadow: 0 0 2px rgba(0,0,0,.1), 0 2px 4px rgba(0,0,0,.1); */
 	}
 	li div {
 		padding: 6px;
 	}
 
-	[aria-current='page'] ~ span {
-		color: var(--color-text);
+	[aria-current='page']  span {
+		color: var(--color-text) !important;
 	}
 
 	/* li[aria-current='page']::before {
@@ -292,7 +296,7 @@
         font-size: 12px;
         line-height: 16px;
         font-weight: 400;
-        color: #677489;
+        color: var(--color-text-2);
     }
 	/* a:hover {
 		color: var(--color-theme-1);
@@ -307,10 +311,17 @@
 		visibility: visible !important;	
 	}
 	:global(body.dark-mode) [aria-current='page'] {
-		outline: 1.5px solid white;
-		background: rgba(255, 255, 255, 0.9);
+		outline: 1.5px solid rgba(255,255,255,1);
+		/* background: rgba(255, 255, 255, 0.9); */
 	}
 	:global(body.dark-mode) header {
-		background: #2E2F30;
+		background: #0d0e0e;
+		border-right: 0.5px solid rgba(255,255,255,0.1);
+	}
+	:global(body.dark-mode) .darkmode-selector p {
+		color: white;
+	}
+	:global(body.dark-mode) span {
+		color: white !important;
 	}
 </style>

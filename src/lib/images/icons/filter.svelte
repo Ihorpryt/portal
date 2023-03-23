@@ -12,6 +12,7 @@
         height: 24px;
     }
     :global(body.dark-mode) .icon svg path {
-        stroke: #99A3B4;
+        stroke: white;
     }
+    
 </style>

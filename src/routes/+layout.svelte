@@ -91,7 +91,7 @@
 		padding: 0;
     }
 	.collapse-btn:hover {
-		background-color: #f3f5f9;
+		background-color: rgba(0, 0, 0, 0.05);
 	}
 	/* .rotate {
 		transform: rotate(180deg);

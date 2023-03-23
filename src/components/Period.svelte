@@ -62,4 +62,10 @@
         position: absolute;
         z-index: 10;
     }
+    :global(body.dark-mode) label {
+        color: var(--color-text-2d);
+    }
+    :global(body.dark .foo):hover {
+        background: rgba(255, 255, 255, 0.1) !important;
+    }
 </style>

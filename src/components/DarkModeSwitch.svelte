@@ -77,5 +77,6 @@
         }
         :global(body.dark-mode) .slider {
             outline: none;
+            background-color: #3E3F43;
         }
     </style>

@@ -27,9 +27,9 @@
         height: 24px;
     }
     :global(body.dark-mode) .icon svg {
-        stroke: #99A3B4;
+        stroke: white;
     }
     :global(body.dark-mode) .icon svg:hover {
-        stroke: #121929;
+        stroke: var(--color-text);
     }
 </style>
