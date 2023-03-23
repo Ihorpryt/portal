@@ -311,7 +311,10 @@
 		visibility: visible !important;	
 	}
 	:global(body.dark-mode) [aria-current='page'] {
-		outline: 1.5px solid rgba(255,255,255,1);
+		/* outline: 1.5px solid rgba(255,255,255,1); */
+		/* box-shadow: inset 0 1px 0 hsla(0,0%,100%,.5); */
+		/* background: linear-gradient(hsla(0,0%,100%,.15),hsla(0,0%,100%,0)); */
+		outline: 1px solid #383a4d;
 		/* background: rgba(255, 255, 255, 0.9); */
 	}
 	:global(body.dark-mode) header {
@@ -323,5 +326,11 @@
 	}
 	:global(body.dark-mode) span {
 		color: white !important;
+	}
+	:global(body.dark-mode) .user-title {
+		color: white;
+	}
+	:global(body.dark-mode) .description {
+		color: var(--color-text-2d);
 	}
 </style>

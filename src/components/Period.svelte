@@ -18,13 +18,13 @@
         showChevron 
         id="bar" 
         class="foo"
-        --background="none"
         --border="0"
         --border-radius="24px"    
         --font-size="13px"
         --height="40px" 
         --internal-padding="18px"  
         --selected-item-padding="14px 0 0 0"
+        --selected-item-color="var(--color-text)"
         --border-hover="0"
         --border-focused="0"
         --chevron-width="40px"
@@ -45,9 +45,9 @@
         width: 150px !important;
         cursor: pointer !important; 
     }
-    :global(.foo):hover {
-        background: #F6F6F8 !important;
-    }
+
+ 
+    
     label {
         pointer-events: none;
         font-family: 'Manrope';
@@ -64,8 +64,5 @@
     }
     :global(body.dark-mode) label {
         color: var(--color-text-2d);
-    }
-    :global(body.dark .foo):hover {
-        background: rgba(255, 255, 255, 0.1) !important;
     }
 </style>
