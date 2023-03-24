@@ -45,9 +45,7 @@
         width: 162px !important;
         cursor: pointer !important; 
     }
-    :global(.foo):hover {
-        background: #F6F6F8 !important;
-    }
+
     label {
         pointer-events: none;
         font-family: 'Manrope';
@@ -61,5 +59,8 @@
         margin-top: 4px;
         position: absolute;
         z-index: 10;
+    }
+    :global(body.dark-mode) label {
+        color: var(--color-text-2d);
     }
 </style>
