@@ -2,6 +2,7 @@
     import Button from "../Button_Secondary.svelte";
 	import Tabs from "../Tabs.svelte";
 	import Period from "../Period.svelte";
+	import Selector from "../Selector.svelte";
 
 	//Tabs
 	let items = ['Flights', 'Hours Flown', 'Miles Flown']
@@ -18,7 +19,8 @@
             <p>Another description that explains all</p>
         </div>
 		<div class="right-tools">
-			<Period />
+			<Selector label="Period" />
+			<!-- <Period /> -->
 			<Button title="Filter"/>
 		</div>
     </div>

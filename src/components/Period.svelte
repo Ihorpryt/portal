@@ -29,6 +29,7 @@
         --border-focused="0"
         --chevron-width="40px"
         --selected-item-font-weight="500"
+        --backgroundColor="red"
         >
 
         <div slot="chevron-icon">

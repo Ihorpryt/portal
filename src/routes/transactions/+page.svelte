@@ -419,7 +419,7 @@
 		display: flex;
 		flex-direction: row;
 
-		color: #15181E;
+		color: var(--color-text);
 	}
 
 	.table-controls {
@@ -457,7 +457,7 @@
     	align-items: center;
 		padding: 0 8px;
 		background-color: #f3f5f9;
-		color: #121929;
+		color: var(--color-text);
 		text-align: center;
 		border-right: 1px solid #E5E7EB;
 		width: 100%;
@@ -514,5 +514,19 @@
 		gap: 12px;
 		justify-content: flex-start;
     	align-items: center;
+	}
+	:global(body.dark-mode) .metrics {
+		background: #2E2F30;
+
+	}
+	:global(body.dark-mode) .metrics_item {
+		background: #3A3B3C;
+		color: var(--color-text-2d)
+	}
+	:global(body.dark-mode) .metrics_right-info {
+		color: white;
+	}
+	:global(body.dark-mode) .arrow-control {
+		background-color: #3A3B3C;
 	}
 </style>
