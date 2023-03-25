@@ -9,9 +9,15 @@
 	--color-bg-2: hsl(224, 44%, 95%);
 	--color-theme-1: #0099ff;
 	--color-theme-2: #40b3ff;
+
+
 	--color-text: #15181E;
 	--color-text-2: rgba(21, 24, 30, 0.64);
 	--color-text-2d: rgba(255, 255, 255, 0.75);
+
+	--dark-border: #000;
+
+
 	--green: #5DC771;
 	--red: #E75B36;
 	--column-width: 42rem;
@@ -49,7 +55,7 @@ h2 {
 
 	letter-spacing: -0.02em;
 
-	color: #121929;
+	color: var(--color-text);
 	width: 100%;
 	margin:0;
 }

@@ -351,6 +351,7 @@
 <style>
 	.group-by {
 		color: var(--color-text-2);
+		font-weight: 400;
 	}
 	.content {
 		display: flex;
@@ -538,5 +539,28 @@
 	}
 	:global(body.dark-mode) .arrow-control {
 		background-color: #3A3B3C;
+	}
+	:global(body.dark-mode) h2 {
+	color: white;
+	}
+	:global(body.dark-mode) .group-by {
+		color: var(--color-text-2d);
+	}
+
+
+	:global(body.dark-mode) .grid {
+		border: 1px solid var(--dark-border);
+	}
+	:global(body.dark-mode) .row {
+		border-bottom: 1px solid var(--dark-border);
+	}
+	:global(body.dark-mode) .item {
+		background-color: #0d0e0e;
+		color: var(--color-text-2d);
+		border-right: 1px solid var(--dark-border);
+	}
+	:global(body.dark-mode) .item-content {
+		border-right: 1px solid var(--dark-border);
+		color: white;
 	}
 </style>
