@@ -1,9 +1,7 @@
 <script>
-    import AircraftSelect from "../../components/AircraftSelect.svelte";
 	import Button from "../../components/Button_Secondary.svelte";
     import ButtonPrimary from "../../components/Button_Primary.svelte";
     import ButtonSmall from "../../components/Button_Small.svelte";
-    import TransactionDatesSelect from "../../components/TransactionDatesSelect.svelte";
     import Caret from "../../lib/images/icons/caret.svelte";
 	import Settings from "../../lib/images/icons/settings.svelte";
     import Comment from "../../lib/images/icons/comment.svelte";
