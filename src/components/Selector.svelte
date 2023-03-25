@@ -1,13 +1,18 @@
 <script>
     import Caret from "../lib/images/icons/caret.svelte";
 
-    let options = [
-      { value: 'option1', label: 'Last 3 months' },
-      { value: 'option2', label: 'Last 6 months' },
-      { value: 'option3', label: 'Last 12 months' }
-    ];
+    // let options = [
+    //   { value: 'option1', label: 'Last 3 months' },
+    //   { value: 'option2', label: 'Last 6 months' },
+    //   { value: 'option3', label: 'Last 12 months' }
+    // ];
+
+    export let options;
     
     export let label = "Label";
+
+    export let small = false;
+    export let large = false;
 
     let selectedOption = options[0].value;
   
@@ -16,14 +21,16 @@
     }
 </script>
 
+    <div class:small class:large>
+        <p class="label">{label}</p>
+        <div class="chevron"> <Caret /></div>
         <select value={selectedOption} on:change={handleSelectOption}>
             {#each options as option}
             <option value={option.value}>{option.label}</option>
             {/each}
         </select>
-        <div class="chevron"> <Caret /></div>
-        <p class="label">{label}</p>
 
+    </div>    
 
 <style>
 
@@ -42,7 +49,7 @@
         z-index: 10;
     }
     select {
-        width: 143px;
+        width: 147px;
         font-size: 13px;
         font-family: 'Manrope';
         font-style: normal;
@@ -60,6 +67,12 @@
         background-color: none;
         transition: 0.3s ease-in-out;
     }
+    .small select {
+        width: 110px;
+    }
+    .large select {
+        width: 155px;
+    }
     
     select:hover {
         background-color: #F6F6F8;
@@ -67,9 +80,15 @@
     .chevron {
         position: absolute;
         margin-top: 12px;
-        margin-left: 116px;
+        margin-left: 120px;
         z-index: 1;
         pointer-events: none;
+    }
+    .small .chevron {
+        margin-left: 83px;
+    }
+    .large .chevron {
+        margin-left: 128px;
     }
     :global(body.dark-mode) select {
         color: white;

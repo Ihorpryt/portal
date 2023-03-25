@@ -1,8 +1,13 @@
 <script>
     import Button from "../Button_Secondary.svelte";
 	import Tabs from "../Tabs.svelte";
-	import Period from "../Period.svelte";
 	import Selector from "../Selector.svelte";
+
+	let options = [
+      { value: 'option1', label: 'Last 3 months' },
+      { value: 'option2', label: 'Last 6 months' },
+      { value: 'option3', label: 'Last 12 months' }
+    ];
 
 	//Tabs
 	let items = ['Flights', 'Hours Flown', 'Miles Flown']
@@ -19,8 +24,7 @@
             <p>Another description that explains all</p>
         </div>
 		<div class="right-tools">
-			<Selector label="Period" />
-			<!-- <Period /> -->
+			<Selector label="Period" options={options} />
 			<Button title="Filter"/>
 		</div>
     </div>

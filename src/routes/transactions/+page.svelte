@@ -16,6 +16,7 @@
     import MarkRed from "../../lib/images/icons/mark-red.svelte";
     import Label from "../../components/Label.svelte";
     import ArrowOpen from "../../lib/images/icons/arrow-open.svelte";
+    import Selector from "../../components/Selector.svelte";
 
 	const items = [
     { text: 'Number of Transactions', currency: '', amount: '52' },
@@ -41,6 +42,17 @@
 	function handleClick() {
 		open = !open
 	}
+
+	let options = [
+      { value: 'option1', label: 'Last 3 months' },
+      { value: 'option2', label: 'Last 6 months' },
+      { value: 'option3', label: 'Last 12 months' }
+    ];
+	let aircraft = [
+      { value: 'all', label: 'All' },
+      { value: 'N849WC', label: 'N849WC' },
+      { value: 'T537GL', label: 'T537GL' }
+    ];
 </script>
 
 <svelte:head>
@@ -54,8 +66,8 @@
 	<div class="top-title">
 		<h2>Transactions</h2>
 		<div class="right-tools">
-			<AircraftSelect />
-			<TransactionDatesSelect />
+			<Selector label="Aircraft" options={aircraft} small/>
+			<Selector label="Transactions dates" options={options} large />
 			<Button title="Filter" />
 			<ButtonPrimary> <Plus /> Add Transaction</ButtonPrimary>
 		</div>

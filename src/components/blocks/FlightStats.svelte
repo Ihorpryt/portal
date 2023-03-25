@@ -3,9 +3,15 @@
     import Chart1 from "../Chart1.svelte";
     import Tabs from "../Tabs.svelte";
     import CompletedFlights from "./CompletedFlights.svelte";
-	import Period from "../Period.svelte";
+	import Selector from "../Selector.svelte";
     import ButtonPrimary from "../Button_Primary.svelte";
     import Plus from "../../lib/images/icons/plus.svelte";
+
+	let options = [
+      { value: 'option1', label: 'Last 3 months' },
+      { value: 'option2', label: 'Last 6 months' },
+      { value: 'option3', label: 'Last 12 months' }
+    ];
 
 	//Tabs
 	let items = ['All', 'Scheduled', 'Completed']
@@ -19,7 +25,7 @@
 	<div class="top-title">
 		<h2>Dashboard</h2>
 		<div class="right-tools">
-			<Period />
+			<Selector label="Period" options={options} />
 			<Button title="Filter"/>
 			<ButtonPrimary> <Plus/> Magic</ButtonPrimary>
 		</div>
@@ -35,7 +41,7 @@
 						<p>Something that explains all and maybe more</p>
 					</div>
 					<div class="right-tools">
-						<Period />
+						<Selector label="Period" options={options}/>
 						<Button title="Filter"/>
 					</div>
 				</div>
