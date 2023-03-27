@@ -28,4 +28,11 @@ class:grey={variant==='grey'}
     .grey {
         background-color: #D7D8D9;
     }
+    
+    :global(body.dark-mode) .green {
+        color: var(--color-text);
+    }
+    :global(body.dark-mode) .grey {
+        color: var(--color-text);
+    }
 </style>
