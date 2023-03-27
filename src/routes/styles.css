@@ -15,11 +15,17 @@
 	--color-text-2: rgba(21, 24, 30, 0.64);
 	--color-text-2d: rgba(255, 255, 255, 0.75);
 
+	--light-border: #E5E7EB;
 	--dark-border: #000;
 
+	--green: #6BD35F;
+	--green-text: #31613B;
+	--green-bg: #E2FBE8;
 
-	--green: #5DC771;
-	--red: #E75B36;
+	--red: #EC4736;
+
+	--grey: #E9ECF5;
+
 	--column-width: 42rem;
 	--column-margin-top: 4rem;
 	font-family: var(--font-body);

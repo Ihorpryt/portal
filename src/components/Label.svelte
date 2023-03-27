@@ -23,16 +23,20 @@ class:grey={variant==='grey'}
 		line-height: 18px;
     }
     .green {
-        background-color: var(--green);
+        background-color: var(--green-bg);
+        color: var(--green-text);
     }
     .grey {
-        background-color: #D7D8D9;
+        background-color: var(--grey);
+        color: var(--color-text-2);
     }
-    
+
     :global(body.dark-mode) .green {
-        color: var(--color-text);
+        color: var(--green);
+        background-color: rgba(226, 251, 232, 0.16);
     }
     :global(body.dark-mode) .grey {
         color: var(--color-text);
+        background-color: rgba(233, 236, 245, 40%);
     }
 </style>

@@ -389,7 +389,7 @@
 		flex-direction: row;
 		width: 100%;
 
-		font-weight: 500;
+		font-weight: 400;
 		font-size: 13px;
 		line-height: 18px;
 		justify-content: space-between;
@@ -429,6 +429,7 @@
 	.metrics_right-info {
 		display: flex;
 		flex-direction: row;
+		font-weight: 500;
 
 		color: var(--color-text);
 	}
@@ -450,7 +451,7 @@
 	.grid {
 		display: flex;
 		flex-direction: column;
-		border: 1px solid #E5E7EB;
+		border: 1px solid var(--light-border);
 		border-top-right-radius: 8px;
 		border-top-left-radius: 8px;
 		overflow: hidden;
@@ -460,7 +461,7 @@
 	.row {
 		display: flex;
 		flex-direction: row;
-		border-bottom: 1px solid #E5E7EB;
+		border-bottom: 1px solid var(--light-border);
 	}
 	.item {
 		display: flex;
@@ -470,7 +471,7 @@
 		background-color: #f3f5f9;
 		color: var(--color-text);
 		text-align: center;
-		border-right: 1px solid #E5E7EB;
+		border-right: 1px solid var(--light-border);
 		width: 100%;
 		height: 24px;
 
@@ -562,5 +563,9 @@
 	:global(body.dark-mode) .item-content {
 		border-right: 1px solid var(--dark-border);
 		color: white;
+	}
+	:global(body.dark-mode) .grid-info {
+		background: #0d0e0e;
+		color: var(--color-text-2d);
 	}
 </style>
