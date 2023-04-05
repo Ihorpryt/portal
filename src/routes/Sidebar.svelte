@@ -267,7 +267,7 @@
 	.user-avatar {
 		width: 44px;
 		height: 44px;
-		background-color: #FAFE2F;
+		background-color: #FFFFFF;
 		border-radius: 100px;
 		display: flex;
 		align-items: center;
@@ -332,5 +332,9 @@
 	}
 	:global(body.dark-mode) .description {
 		color: var(--color-text-2d);
+	}
+	:global(body.dark-mode)  .user-avatar {
+		background-color: #3E3F43;
+		color: white;
 	}
 </style>

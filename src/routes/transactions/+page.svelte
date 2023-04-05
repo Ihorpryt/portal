@@ -383,6 +383,7 @@
 		/* width: 100%; */
 		margin-top: 8px;
 		transition: 0.3s;
+		box-shadow: 0 24px 48px 0 rgba(0,0,0,.06);
 	}
 	.metrics_item {
 		display: flex;
@@ -394,6 +395,7 @@
 		line-height: 18px;
 		justify-content: space-between;
 		padding: 12px 24px;
+		
 		background-color: white;
 		border-radius: 21px;
 		transition: 0.3s;
@@ -403,6 +405,7 @@
 	.open {
 		flex-direction: column;
 		gap: 6px;
+		padding: 12px 24px 16px 24px;
 	}
 	.open .metrics_right-info {
 		font-size: 24px;
@@ -529,6 +532,7 @@
 	}
 	:global(body.dark-mode) .metrics {
 		background: #2E2F30;
+		border: 0.5px solid rgba(255,255,255,0.1);
 
 	}
 	:global(body.dark-mode) .metrics_item {

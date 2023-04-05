@@ -22,8 +22,11 @@
       font-weight: 600;
       cursor: pointer;
       white-space: nowrap;
+      box-shadow: 0 8px 16px 0 rgb(27 145 224 / 20%);
+      transition: 0.3s;
     }
     button:hover {
         background-color: #1198cd;
+        box-shadow: 0 1px 8px 0 rgb(27 145 224 / 20%);
     }
   </style>

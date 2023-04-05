@@ -44,7 +44,7 @@
     }
     .active {
         color: #121929;
-        border-bottom: 2px solid #121929;
+        border-bottom: 2px solid var(--color-theme-1);
         padding-bottom: 8px;
     }
     :global(body.dark-mode) .active {
