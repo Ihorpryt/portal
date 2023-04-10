@@ -18,10 +18,10 @@
     import LabelMetrics from "../../components/Label_metrics.svelte";
 
 	const items = [
-    { text: 'Number of Transactions', currency: '', amount: '52', percentage: '5.2%', variant: 'red' },
-    { text: 'Charter Revenue (NET)', currency: 'EUR', amount: '939,300.78', percentage: '5.2%', variant: 'green' },
+    { text: 'Number of Transactions', currency: '', amount: '52', percentage: '2.4%', variant: 'red' },
+    { text: 'Charter Revenue (NET)', currency: 'EUR', amount: '939,300.78', percentage: '3.8%', variant: 'green' },
     { text: 'Expenses', currency: 'EUR', amount: '6,151', percentage: '5.2%', variant: 'green' },
-    { text: 'Operating Profit/Loss', currency: 'EUR', amount: '120,151', percentage: '5.2%', variant: 'green' },
+    { text: 'Operating Profit/Loss', currency: 'EUR', amount: '120,151', percentage: '11.1%', variant: 'green' },
   	];
 
 	const numb = [
