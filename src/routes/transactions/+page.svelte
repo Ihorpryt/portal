@@ -15,12 +15,13 @@
     import Label from "../../components/Label.svelte";
     import ArrowOpen from "../../lib/images/icons/arrow-open.svelte";
     import Selector from "../../components/Selector.svelte";
+    import LabelMetrics from "../../components/Label_metrics.svelte";
 
 	const items = [
-    { text: 'Number of Transactions', currency: '', amount: '52' },
-    { text: 'Charter Revenue (NET)', currency: 'EUR', amount: '939,300.78' },
-    { text: 'Expenses', currency: 'EUR', amount: '6,151' },
-    { text: 'Operating Profit/Loss', currency: 'EUR', amount: '120,151' },
+    { text: 'Number of Transactions', currency: '', amount: '52', percentage: '5.2%', variant: 'red' },
+    { text: 'Charter Revenue (NET)', currency: 'EUR', amount: '939,300.78', percentage: '5.2%', variant: 'green' },
+    { text: 'Expenses', currency: 'EUR', amount: '6,151', percentage: '5.2%', variant: 'green' },
+    { text: 'Operating Profit/Loss', currency: 'EUR', amount: '120,151', percentage: '5.2%', variant: 'green' },
   	];
 
 	const numb = [
@@ -73,7 +74,13 @@
 
 	<div class="metrics">
 		{#each items as item}
-			<div class="metrics_item" class:open>{item.text} <div class="metrics_right-info">{item.currency} {item.amount}</div></div>
+			<div class="metrics_item" class:open>
+				{item.text} 
+				<div class="metrics_right-info">{item.currency} {item.amount}</div>
+				<div class:open class="numbers">
+					<LabelMetrics variant={item.variant} >{item.percentage}</LabelMetrics>
+				</div>
+			</div>
 		{/each}
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<div class="arrow-control" on:click={handleClick}>
@@ -340,6 +347,28 @@
 			<div class="item-content"><Label variant="grey">Not published</Label></div>
 			<div class="item-content">January 2017</div>
 		</div>
+		<div class="row">
+			<div class="item-content number">21 <Expand /></div>
+			<div class="item-content review"><Mark/> <Comment/></div>
+			<div class="item-content">17 Jan 2023</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">Fuel</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content"><Label variant="grey">Not published</Label></div>
+			<div class="item-content">January 2017</div>
+		</div>
+		<div class="row">
+			<div class="item-content number">22 <Expand /></div>
+			<div class="item-content review"><Mark/> <Comment/></div>
+			<div class="item-content">17 Jan 2023</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">Fuel</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content">January 2017</div>
+			<div class="item-content"><Label variant="grey">Not published</Label></div>
+			<div class="item-content">January 2017</div>
+		</div>
 
 
 	</div>
@@ -388,6 +417,7 @@
 	.metrics_item {
 		display: flex;
 		flex-direction: row;
+		position: relative;
 		width: 100%;
 
 		font-weight: 400;
@@ -401,6 +431,7 @@
 		transition: 0.3s;
 
 		color: var(--color-text-2);
+		/* box-shadow: 0 2px 4px #0000000f; */
 	}
 	.open {
 		flex-direction: column;
@@ -410,6 +441,15 @@
 	.open .metrics_right-info {
 		font-size: 24px;
 		font-weight: 400;
+	}
+	.numbers {
+		display: none;
+	}
+	.open .numbers {
+		display: block;
+		position: absolute;
+		right: 0;
+		top:8px;
 	}
 	.arrow-control {
 		display: flex;
