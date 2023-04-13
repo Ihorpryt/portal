@@ -57,6 +57,7 @@
 		flex-direction: column;
 		width: 100%;
 		border: 1.5px solid #E5E7EB;
+		background: white;
 		border-radius: 24px;
 		/* background-color: #F4F4F6; */
 		box-shadow: 0 24px 48px 0 rgba(0,0,0,.06);
