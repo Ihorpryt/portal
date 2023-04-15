@@ -94,7 +94,7 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		gap: 12px;
+		gap: 24px;
 	}
 	.group-top {
 		display: flex;
@@ -127,7 +127,7 @@
 		margin-top: 12px;
 		display: flex;
 		flex-direction: row;
-        gap: 12px;
+        gap: 24px;
 	}
 	.left-cell-group {
 		/* background-color: aquamarine; */

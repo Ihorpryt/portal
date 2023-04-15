@@ -13,6 +13,7 @@
 	export let open;
     // $: console.log(open)
 
+
 	
 </script>
 
@@ -31,7 +32,7 @@
 
 	<nav>
 		<ul>
-			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
+			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined} >
 				<a href="/">
 					<div>
 						<!-- <DashboardIcon color={$page.url.pathname === '/' ? '#15181E' : 'var(--color-text-2)'} /> -->
