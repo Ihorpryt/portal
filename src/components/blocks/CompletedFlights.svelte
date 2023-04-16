@@ -121,6 +121,7 @@
 		height: 14px;
 		width: 270px;
 		border-radius: 40px;
+		box-shadow: 0px 4px 4px rgba(105, 198, 197, 0.2);
 	}
 	.top {
 		width: 135px;

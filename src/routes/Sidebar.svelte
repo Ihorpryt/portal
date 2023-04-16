@@ -274,6 +274,7 @@
 		align-items: center;
 		justify-content: center;
 		font-size: 20px;
+		box-shadow: 0 1px 2px rgba(8, 10, 16, 0.5);
 	}
 	.user-selector-text {
 		opacity: 0;

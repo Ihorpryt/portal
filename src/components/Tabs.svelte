@@ -43,8 +43,8 @@
         margin-left: 0;
     }
     .active {
-        color: #121929;
-        border-bottom: 2px solid var(--color-theme-1);
+        color: var(--color-text);
+        border-bottom: 2px solid var(--color-text);
         padding-bottom: 8px;
     }
     :global(body.dark-mode) .active {

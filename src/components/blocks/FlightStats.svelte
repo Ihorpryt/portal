@@ -163,20 +163,20 @@
 		padding: 16px 24px;
 	}
 	.left-top {
-		border-top-left-radius: 24px;
+		border-top-left-radius: 20px;
 		border-bottom-right-radius: 24px;
 	}
 	.left-bottom {
-		border-bottom-left-radius: 24px ;
+		border-bottom-left-radius: 20px ;
 		border-top-right-radius: 24px;
 	}
 	.right-top {
-		border-top-right-radius: 24px;
+		border-top-right-radius: 20px;
 		border-bottom-left-radius: 24px ;
 	}
 	.right-bottom {
 		border-top-left-radius: 24px;
-		border-bottom-right-radius: 24px;
+		border-bottom-right-radius: 20px;
 	}
 
 	.cell p:first-child {
