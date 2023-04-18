@@ -179,9 +179,13 @@
 	li:hover {
 		background-color: rgba(0, 0, 0, 0.05);
 	}
+	li:hover span  {
+		color: var(--color-text) !important;
+	}
 	span {
 		color: var(--color-text-2) !important;
 		font-weight: 600;
+		-webkit-font-smoothing: antialiased;
 	}
 
 	/* li[aria-current='page'] {

@@ -148,4 +148,7 @@
 	:global(body.dark-mode) .title-group p {
 		color:rgba(255, 255, 255, 0.75);
 	}
+	:global(body.dark-mode) .rectangle {
+		box-shadow: none;
+	}
 </style>
