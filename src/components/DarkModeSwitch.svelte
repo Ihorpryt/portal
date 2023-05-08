@@ -66,7 +66,7 @@
         height: 16px;
         border-radius: 50%;
         box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5), 0px 0px 0px 4px rgba(255, 255, 255, 0.25),0px 0px 0px 6px rgba(255, 255, 255, 0.25);
-        background: linear-gradient(180deg, rgba(207, 105, 105, 0.4) 0%, rgba(249, 177, 177, 0) 100%), #FFC700;
+        background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
         transition: 0.3s;
         outline: 2px solid rgba(255, 234, 180, 0.4);
         }

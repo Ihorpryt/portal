@@ -132,7 +132,7 @@
 		background-color: #1EAAE2;
 	}
 	:global(body.dark-mode) .left-cell-group {
-		background: #242526;
+		background: linear-gradient(180deg,#282b30,#24272b 53.65%,#232529);
 		border: 0.5px solid rgba(255,255,255,0.1);
 	}
 	:global(body.dark-mode) h3 {

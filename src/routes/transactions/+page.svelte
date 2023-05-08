@@ -571,7 +571,7 @@
     	align-items: center;
 	}
 	:global(body.dark-mode) .metrics {
-		background: #2E2F30;
+		background: linear-gradient(180deg,#282b30,#24272b 53.65%,#232529);
 		border: 0.5px solid rgba(255,255,255,0.1);
 
 	}
